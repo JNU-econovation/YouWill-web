@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
             <ul>
                 <li>유서</li>
                 <li>편지</li>
-                <li class="current-page">힐링</li>
+                <li class="current-page"><a href="healing_main.html">힐링</a></li>
             </ul>
         </nav>
         <nav class="nav nav-auth">
@@ -34,17 +34,9 @@
         </div>
         <div class="healing-list">
             <div class="healing-category">
-                <h3><a href="healing_top.html">인기 글</a></h3>
-                <p class="view-more"><a href="healing_top.html">더보기</a></p>
+                <h3>방금 올라온 글</h3>
             </div>
-            <div class="healing-preview" id="healing-top"></div>
-        </div>
-        <div class="healing-list">
-            <div class="healing-category">
-                <h3><a href="healing_recent.html">방금 올라온 글</a></h3>
-                <p class="view-more"><a href="healing_recent.html">더보기</a></p>
-            </div>
-            <div class="healing-preview" id="healing-recent"></div>
+            <div class="healing-preview" id="healing-list"></div>
         </div>
     </div>
     <footer>
@@ -57,6 +49,6 @@
             </ul>
         </nav>
     </footer>
-    <script src="../../js/healing/healing_main.js"></script>
+    <script src="../../js/healing/healing_list.js"></script>
 </body>
 </html>
