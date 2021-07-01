@@ -11,9 +11,6 @@
   --font1: #ededed;
   --font2: #dbdbdb;
   --font3: #191919;
-  /*size*/
-
-  /*font size*/
 }
 
 * {
@@ -66,7 +63,7 @@ header ul li {
   display: flex;
   justify-content: space-between;
 }
-button {
+.btn button {
   display: inline-block;
   border: none;
   padding: 8px 12px;
@@ -81,40 +78,6 @@ button {
   background-color: var(--main1);
   color: var(--font1);
   border-radius: 5px;
-}
-
-/*main*/
-.main img {
-  border: 1px solid black;
-}
-
-/*category*/
-.category {
-  margin-top: 30px;
-  padding-bottom: 300px;
-  display: flex;
-  justify-content: space-evenly;
-}
-.category li {
-  text-align: center;
-}
-#bold {
-  font-weight: bold;
-  color: var(--main1);
-}
-
-.will {
-  display: flex;
-  flex-direction: column;
-}
-
-.letter {
-  display: flex;
-  flex-direction: column;
-}
-.heeling {
-  display: flex;
-  flex-direction: column;
 }
 
 /*footer*/
