@@ -17,14 +17,24 @@
 .logo_will {
   width: 100%;
   height: 200px;
-}
-.logo_will .logo {
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+.logo_will h1 {
+  color: var(--main1);
+  margin-bottom: 10px;
+  font-weight: bolder;
 }
 .logo_will button {
   border: none;
+  background-color: white;
+  padding: 12px;
+}
+.logo_will i {
+  color: #acc69f;
 }
 
 /*scroll*/
@@ -39,6 +49,9 @@
   width: fit-content;
   margin-top: 30%;
   margin-bottom: 30%;
+}
+.scroll #poto1 {
+  margin-top: 10%;
 }
 .scroll li img {
   border: none;
@@ -77,15 +90,53 @@
   position: relative;
   left: 65%;
 }
-
+.scroll span {
+  font-weight: bold;
+}
 /*bottom*/
 .bottom {
   margin-bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .bottom div {
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 .bottom button {
-  position: relative;
-  left: 50%;
+  margin-top: 8%;
+  border: none;
+  border-radius: 4px;
+  background-color: #f8f3cc;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 120px;
 }
+/* .bottom div {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+
+}
+.bottom .first {
+  color: #a1a1a1;
+}
+.bottom button {
+  border: none;
+  border-radius: 4px;
+  background-color: #f8f3cc;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+  padding: 15px 120px;
+
+  margin-top: 30px;
+  position: relative;
+  left: 38%;
+} */
