@@ -39,6 +39,10 @@
                         </div>`;
       healingItem.innerHTML = itemTitle + itemContent + itemDetail;
       healingItem.setAttribute('class', 'healing-item');
+      healingItem.setAttribute(
+        'onClick',
+        "location.href='healing_detail.html'"
+      );
       healingPreview.appendChild(healingItem);
     }
   }
