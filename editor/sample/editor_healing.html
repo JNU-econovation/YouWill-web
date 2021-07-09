@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="../../css/healing.css">
+	<title>You Will</title>
+</head>
+<body data-editor="ClassicEditor" data-collaboration="false">
+	<header>
+        <h2 class="logo">You Will</h2>
+        <nav class="nav nav-category">
+            <ul>
+                <li>유서</li>
+                <li>편지</li>
+                <li class="current-page"><a href="../../html/healing/healing_main.html">힐링</a></li>
+            </ul>
+        </nav>
+        <nav class="nav nav-auth">
+            <ul>
+                <li>로그인</li>
+                <li class="button-signup">회원가입</li>
+            </ul>
+        </nav>
+    </header>
+	<main class="container">
+		<div class="category-intro">
+            <h3 class="category-name">힐링</h3>
+            <i class="fas fa-pencil-alt fa-3x icon-pencil"></i>
+        </div>
+		<div class="centered">
+			<div class="row row-editor">
+				<div class="editor-container">
+					<div class="editor"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="../build/ckeditor.js"></script>
+	<script>ClassicEditor.create( document.querySelector( '.editor' ), {
+			toolbar: {
+				items: [
+					'heading',
+					'|',
+					'bold',
+					'italic',
+					'link',
+					'bulletedList',
+					'numberedList',
+					'|',
+					'outdent',
+					'indent',
+					'|',
+					'imageUpload',
+					'blockQuote',
+					'insertTable',
+					'mediaEmbed',
+					'undo',
+					'redo'
+				]
+			},
+			language: 'ko',
+			image: {
+				toolbar: [
+					'imageTextAlternative',
+					'imageStyle:inline',
+					'imageStyle:block',
+					'imageStyle:side'
+				]
+			},
+			table: {
+				contentToolbar: [
+					'tableColumn',
+					'tableRow',
+					'mergeTableCells'
+				]
+			},
+				licenseKey: '',
+			} )
+			.then( editor => {
+				window.editor = editor;		
+			} )
+			.catch( error => {
+				console.error( 'Oops, something went wrong!' );
+				console.error( error );
+			} );
+	</script>
+</body>
+</html>
