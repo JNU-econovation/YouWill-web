@@ -28,11 +28,12 @@
             </ul>
         </nav>
     </header>
-	<main class="container">
+	<class class="container">
 		<div class="category-intro">
             <h3 class="category-name">힐링</h3>
             <i class="fas fa-pencil-alt fa-3x icon-pencil"></i>
         </div>
+		<input type="text" minlength="1" class="title-input" placeholder="제목을 입력하세요.">
 		<div class="centered">
 			<div class="row row-editor">
 				<div class="editor-container">
@@ -40,7 +41,21 @@
 				</div>
 			</div>
 		</div>
+		<div class="button-row">
+            <button class="grey-button">저장</button>
+            <button class="yellow-button"><a href="../../html/healing/healing_detail.html">작성 완료</a></button>
+        </div>
 	</main>
+	<footer>
+        <h2 class="logo">You Will</h2>
+        <nav class="nav nav-category">
+            <ul>
+                <li>유서</li>
+                <li>편지</li>
+                <li>힐링</li>
+            </ul>
+        </nav>
+    </footer>
 	<script src="../build/ckeditor.js"></script>
 	<script>ClassicEditor.create( document.querySelector( '.editor' ), {
 			toolbar: {
