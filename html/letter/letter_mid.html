@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/basic.css">
+    <link rel="stylesheet" href="/css/letter.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="/js/letter/letter_mid.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+        <script>
+            $( function() {
+                $( "#datepicker" ).datepicker({
+                    showOn: "button",
+                    buttonImage: "images/calendar.gif",
+                    buttonImageOnly: true,
+                    // buttonText: "Select date",
+
+                    changeYear:true,
+                    minDate:0,
+                    dateFormat:"yy년-mm월-dd일"
+                    
+                });
+            } );
+        </script>
+    
+
+
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="write" style="width:320px">
+            <div class="logo"><a href="">You Will</a></div>
+            <ul>
+                <li><a href="">유서</a></li>
+                <li><a href="">편지</a></li>
+                <li><a href="">힐링</a></li>
+            </ul>
+        </div>
+        
+        <div class="btn" style="width: 170px;">
+            <button id="login"class="login">로그인</button>
+            <button id="join" class="join">회원가입</button>
+        </div> 
+    </header>
+
+    <!--logo_letter-->
+    <section class="logo_letter">
+        <h1>편지</h1>
+        <button><i class="fas fa-pencil-alt fa-3x icon-pencil"></i></button>       
+    </section>
+
+    <!--main-->
+    <section class="main">
+        <div class="who">
+            <div>누구에게 보내는 편지인가요?</div>
+            <div class="btns">
+                <button id="toMe">나에게</button>
+                <button id="toOther">다른 사람에게</button>
+            </div>
+            
+        </div>
+        <div class="info">
+            <div>받는 사람의 휴대폰 번호나 이메일 주소를 입력해주세요.</div>
+            <form name="userInfo" action="" method="" autocomplete="on">
+                <input class="phoneOrEmail" type='email' name='userEmail'>
+            </form>
+        </div>
+        <div class="when">
+            <div>언제 도착하는 편지인가요?</div>
+            <form action="">
+                <!-- <select name="year">
+                    <option value="0">연도</option>
+                    <SCRIPT LANGUAGE="JavaScript">
+                        let nowYear=new Date().getFullYear();
+                        for(let i=nowYear;i<=nowYear+10;i++){
+                            document.write("<option value="+i+">"+i+'년');
+                        }
+                    </SCRIPT>
+                </select>
+    
+                <select id="month">
+                    <option value="0">월</option>
+                    <SCRIPT LANGUAGE="JavaScript">
+                        
+                        for(let i=1;i<=12;i++){
+                            document.write("<option value="+i+">"+i+'월');
+                        }
+                    </SCRIPT>
+    
+                </select>
+    
+                <select id="day">
+                    <option value="0">일</option>
+                    <SCRIPT LANGUAGE="JavaScript">
+                        for(let i=1;i<=31;i++){
+                            document.write("<option value="+i+">"+i+'일');
+                        }
+                    </SCRIPT> 
+                </select>  -->
+                <p>Date: <input type="text" id="datepicker"></p>
+                
+            </form>
+           
+
+
+
+           
+        </div>
+
+        <div class="letter_pad">
+            <div>마음에 드는 편지지를 골라주세요.</div>
+        </div>
+    </section>
+
+
+    <!--btn-->
+    <section class="saveAndWrite">
+        <button class="save">저장</button>
+        <button class="goToWrite">편지 작성하러 가기</button>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="logo">You Will</div>
+        <ul>
+            <li>유서</li>
+            <li>편지</li>
+            <li>힐링</li>
+        </ul>
+    </footer>
+</body>
+</html>
