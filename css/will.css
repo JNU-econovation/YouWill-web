@@ -12,26 +12,32 @@
   --font2: #dbdbdb;
   --font3: #191919;
 }
+html {
+  font-size: 14px;
+}
 
 /*logo*/
 .logo_will {
   width: 100%;
-  height: 200px;
+  height: 20rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin-bottom: 10rem;
 }
 .logo_will h1 {
   color: var(--main1);
-  margin-bottom: 10px;
+  margin-bottom: 0.5em;
   font-weight: bolder;
 }
 .logo_will button {
   border: none;
   background-color: white;
-  padding: 12px;
+  padding: 1em;
+  cursor: pointer;
 }
 .logo_will i {
   color: #acc69f;
@@ -39,104 +45,28 @@
 
 /*scroll*/
 .scroll {
+  width: 100%;
+  height: 300rem;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  margin-bottom: 20rem;
 }
-.scroll li {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+
+.scroll div {
   width: fit-content;
-  margin-top: 30%;
-  margin-bottom: 30%;
-}
-.scroll #poto1 {
-  margin-top: 10%;
-}
-.scroll li img {
-  border: none;
-  width: 65%;
-  margin-top: 30px;
+  height: 20rem;
 
-  /* opacity: 0; */
-}
-
-.fade-in {
-  animation: fade-in 1.4s;
-  animation-direction: alternate;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#poto1,
-#poto3,
-#poto5 {
-  /* margin-left: 150px;
-  margin-right: auto; */
-  position: relative;
-  left: 15%;
-}
-#poto2,
-#poto4 {
-  /* margin-right: 150px;
-  margin-left: auto; */
-  position: relative;
-  left: 65%;
-}
-.scroll span {
-  font-weight: bold;
-}
-/*bottom*/
-.bottom {
-  margin-bottom: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
-.bottom div {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.bottom button {
-  margin-top: 8%;
-  border: none;
-  border-radius: 4px;
-  background-color: #f8f3cc;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 18px;
-  text-align: center;
-  padding: 10px 120px;
-}
-/* .bottom div {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 8px;
 
+.scroll img {
+  width: 17em;
+  height: 15em;
 }
-.bottom .first {
-  color: #a1a1a1;
-}
-.bottom button {
-  border: none;
-  border-radius: 4px;
-  background-color: #f8f3cc;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 15px;
-  text-align: center;
-  padding: 15px 120px;
-
-  margin-top: 30px;
-  position: relative;
-  left: 38%;
-} */
