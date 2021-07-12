@@ -13,23 +13,26 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
-        <script>
-            $( function() {
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+         $( function() {
                 $( "#datepicker" ).datepicker({
-                    showOn: "button",
-                    buttonImage: "images/calendar.gif",
+                    showOn: "both",
+                    // buttonImage: "images/calendar.gif",
+                    buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
                     buttonImageOnly: true,
                     // buttonText: "Select date",
 
                     changeYear:true,
                     minDate:0,
-                    dateFormat:"yy년-mm월-dd일"
+                    dateFormat:"yy. mm . dd"
                     
                 });
             } );
-        </script>
+        
+    </script>
+        
     
 
 
@@ -37,7 +40,7 @@
 <body>
     <!--header-->
     <header>
-        <div class="write" style="width:320px">
+        <div class="write" style="width:320px"> 
             <div class="logo"><a href="">You Will</a></div>
             <ul>
                 <li><a href="">유서</a></li>
@@ -76,8 +79,8 @@
         </div>
         <div class="when">
             <div>언제 도착하는 편지인가요?</div>
-            <form action="">
-                <!-- <select name="year">
+            <!-- <form action="">
+                <select name="year">
                     <option value="0">연도</option>
                     <SCRIPT LANGUAGE="JavaScript">
                         let nowYear=new Date().getFullYear();
@@ -106,23 +109,31 @@
                         }
                     </SCRIPT> 
                 </select>  -->
-                <p>Date: <input type="text" id="datepicker"></p>
+                <!-- <p>Date: <input type="text" id="datepicker"></p> -->
+                <div class="datepicker">
+                    <input type="text" id="datepicker">
+                </div>
                 
             </form>
-           
-
-
-
            
         </div>
 
         <div class="letter_pad">
-            <div>마음에 드는 편지지를 골라주세요.</div>
+            <div class="msg">마음에 드는 편지지를 골라주세요.</div>
+            <div class="container">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
+                
+            </div>
         </div>
     </section>
 
 
-    <!--btn-->
+    <!--saveAndWrite-->
     <section class="saveAndWrite">
         <button class="save">저장</button>
         <button class="goToWrite">편지 작성하러 가기</button>
