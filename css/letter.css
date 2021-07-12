@@ -201,3 +201,57 @@ input {
 .saveAndWrite .goToWrite {
   background-color: var(--main4);
 }
+
+/*main_last*/
+
+.main_last {
+  width: 50%;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_last .mailbox {
+  width: 50em;
+  height: 30em;
+}
+.main_last .mailbox img {
+  display: block;
+  width: 50%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 3em;
+
+  animation-name: mailBox;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes mailBox {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+.main_last .msg {
+  text-align: center;
+  font-size: 1.3em;
+  color: var(--main1);
+}
+.main_last button {
+  display: inline;
+  position: relative;
+
+  border: none;
+  border-radius: 4px;
+  background-color: var(--main4);
+
+  height: 3rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
