@@ -45,7 +45,7 @@ html {
 /****main****/
 .main {
   width: 100%;
-  height: 80rem;
+  height: 120rem;
 
   display: flex;
   flex-direction: column;
@@ -120,13 +120,59 @@ input {
   width: 100%;
   height: 4.5rem;
 }
+.main .datepicker {
+  display: flex;
+  width: 20vw;
+  justify-content: center;
+  cursor: pointer;
+}
+.main .datepicker input {
+  text-align: center;
+  padding-bottom: 0.5em;
+  margin-right: 2em;
+  width: 10em;
+  border: none;
+  border-bottom: 0.2px solid var(--main3);
+}
 
+.main .datepicker input:focus {
+  outline: none;
+}
+
+/*jQuery 사용 x일경우*/
 .main .when form {
   /* display: flex; */
   width: 15vw;
   justify-content: center;
 }
 
+/*letter_pad*/
+.letter_pad {
+  width: 50%;
+  height: 45%;
+}
+.letter_pad .msg {
+  text-align: center;
+  margin-bottom: 5em;
+}
+.letter_pad .container {
+  width: 100%;
+  height: 90%;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+
+  row-gap: 30px;
+  column-gap: 30px;
+
+  align-content: center;
+  justify-content: center;
+}
+
+.letter_pad .container .item {
+  border: 1px solid black;
+}
 /*saveAndWrite*/
 .saveAndWrite {
   width: 50vw;
@@ -154,4 +200,58 @@ input {
 }
 .saveAndWrite .goToWrite {
   background-color: var(--main4);
+}
+
+/*main_last*/
+
+.main_last {
+  width: 50%;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_last .mailbox {
+  width: 50em;
+  height: 30em;
+}
+.main_last .mailbox img {
+  display: block;
+  width: 50%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 3em;
+
+  animation-name: mailBox;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes mailBox {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+.main_last .msg {
+  text-align: center;
+  font-size: 1.3em;
+  color: var(--main1);
+}
+.main_last button {
+  display: inline;
+  position: relative;
+
+  border: none;
+  border-radius: 4px;
+  background-color: var(--main4);
+
+  height: 3rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
 }
