@@ -13,7 +13,7 @@
   --font3: #191919;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /*logo*/
@@ -46,27 +46,106 @@ html {
 /*scroll*/
 .scroll {
   width: 100%;
-  height: 300rem;
+  height: 270rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   position: relative;
-  margin-bottom: 20rem;
+  margin-bottom: 25rem;
 }
 
 .scroll div {
   width: fit-content;
-  height: 20rem;
+  /* height: fit-content; */
+  height: 25em;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
   justify-content: space-between;
+
+  position: relative;
+
+  /*scroll 애니메이션*/
+  opacity: 0;
+  transition: all 1.5s ease;
+  transform: translate(0, 100px);
+}
+.scroll .show {
+  opacity: 1;
+  transform: none;
+}
+.scroll img {
+  width: 20em;
+  height: 18em;
 }
 
-.scroll img {
-  width: 17em;
-  height: 15em;
+#poto1,
+#poto3,
+#poto5 {
+  left: 15%;
+}
+
+#poto2,
+#poto4 {
+  left: 70%;
+}
+
+/*scroll 애니메이션 이전 버전*/
+/* .fade-in {
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/*bottom*/
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 12em;
+  margin-bottom: 15rem;
+
+  /*scroll 애니메이션*/
+  /* opacity: 0;
+  transition: all 1.5s ease; */
+}
+/* .bottom .show {
+  opacity: 1;
+  transform: none;
+} */
+.bottom .msg {
+  text-align: center;
+}
+.bottom .msg strong {
+  display: block;
+}
+.bottom .msg .first {
+  color: var(--main3);
+  margin-bottom: 1em;
+}
+
+.bottom button {
+  font-size: 1.1em;
+  border: none;
+  background-color: var(--main4);
+  border-radius: 4px;
+  cursor: pointer;
+
+  width: 20%;
+  height: 45px;
+  min-width: 200px;
 }

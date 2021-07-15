@@ -1,39 +1,33 @@
-const animation = function () {
-  let items, winH;
- 
-  const initModule = function () {
-      console.log('initModule()')
 
-      items = document.getElementsByTagName("img")
-      winH = window.innerHeight;
-      console.log(items)
-      console.log(winH)
-      _addEventHandlers();
-  }
- 
-  const _addEventHandlers = function () {
-      console.log('addEventHandlers()')
-      window.addEventListener("scroll", _checkPosition);
-      window.addEventListener("resize", initModule);
-  };
- 
-  const _checkPosition = function () {
-      console.log('checkposition()')
+const triggerMargin = 150;
+const potos = document.querySelectorAll('.poto');
+const bottom = document.querySelector('.bottom');
 
-      for (let i = 0; i < items.length; i++){
-          // console.log(i)
-          let posFromTop = items[i].getBoundingClientRect().top;
-          
-          if (winH > posFromTop) {
-          // items[i].classList.add('fade-in')
-          items[i].className = items[i].className.replace( "hidden", "fade-in" );
-          }
+const setLayout = function() {
+  for (const element of potos) {
+    if (!element.classList.contains('show')) {
+      if (window.innerHeight > element.getBoundingClientRect().top + triggerMargin) {
+        element.classList.add('show');
       }
+    }
   }
- 
-  return {
-    init: initModule
-  }
+  if(!bottom.classList.contains('show')){
+        if(window.innerHeight > bottom.getBoundingClientRect().top){
+            bottom.classList.add('show');
+        }
+          
+    }
+  
 }
- 
-animation().init();
+// const setLayoutBottom= function(){
+//     if(!bottom.classList.contains('show')){
+//         if(window.innerHeight > bottom.getBoundingClientRect().top){
+//             bottom.classList.add('show');
+//         }
+      
+//     }
+// }
+
+window.addEventListener('load', setLayout);
+
+window.addEventListener('scroll', setLayout);
