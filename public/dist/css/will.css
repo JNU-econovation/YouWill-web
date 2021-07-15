@@ -83,14 +83,14 @@ html {
   height: 18em;
 }
 
-#poto1,
-#poto3,
-#poto5 {
+#image1,
+#image3,
+#image5 {
   left: 15%;
 }
 
-#poto2,
-#poto4 {
+#image2,
+#image4 {
   left: 70%;
 }
 

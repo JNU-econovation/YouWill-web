@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/dist/css/basic.css">
+    <link rel="stylesheet" href="/public/dist/css/healing.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>You Will</title>
+</head>
+<body>
+    <header>
+        <div class="write" style="width:320px">
+            <div class="logo"><a href="/public/">You Will</a></div>
+            <ul>
+                <li><a href="/public/pages/will/">유서</a></li>
+                <li><a href="/public/pages/letter/">편지</a></li>
+                <li><a href="/public/pages/healing/">힐링</a></li>
+            </ul>
+        </div>
+        <div class="btn" style="width: 170px;">
+            <button class="login" id="login"><a href="/public/pages/login/">로그인</a></button>
+            <button class="join" id="join"><a href="/public/pages/register/">회원가입</a></button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="category-intro">
+            <h3 class="category-name">힐링</h3>
+            <a href=""><i class="fas fa-pencil-alt fa-3x icon-pencil"></i></a>
+        </div>
+        <div class="healing-list">
+            <div class="healing-category">
+                <h3><a href="/public/pages/healing/healing_top.html">인기 글</a></h3>
+                <p class="view-more"><a href="/public/pages/healing/healing_top.html">더보기</a></p>
+            </div>
+            <div class="healing-preview" id="healing-top"></div>
+        </div>
+        <div class="healing-list">
+            <div class="healing-category">
+                <h3><a href="/public/pages/healing/healing_recent.html">방금 올라온 글</a></h3>
+                <p class="view-more"><a href="/public/pages/healing/healing_recent.html">더보기</a></p>
+            </div>
+            <div class="healing-preview" id="healing-recent"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="logo">You Will</div>
+        <ul>
+            <li>유서</li>
+            <li>편지</li>
+            <li>힐링</li>
+        </ul>
+    </footer>
+    <script src="/public/dist/js/healing/healing_main.js"></script>
+</body>
+</html>

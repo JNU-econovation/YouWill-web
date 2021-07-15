@@ -1,0 +1,169 @@
+.container {
+    display: grid;
+    grid-gap: 5rem;
+    place-items: center;
+    margin-top: 150px;
+}
+
+.category-intro {
+    text-align: center;
+}
+
+.category-name {
+    font-size: 1.8rem;
+    color: #748e64;
+    margin-bottom: 20px;
+}
+
+.icon-pencil{
+    color: #ACC69F;
+    cursor: pointer;
+}
+
+.healing-list {
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5rem;
+    padding: 0 8rem;
+}
+
+.healing-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.healing-category > h3 {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.healing-category > h3 a {
+    color: black;
+}
+
+.view-more {
+    font-size: 16px;
+    cursor: pointer
+}
+.view-more > a {
+    color: black;
+}
+
+.healing-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.healing-item {
+    background-color: #F8F8FA;
+    border-radius: 30px;
+    height: 250px;
+    box-shadow: 0 1px 5px 0 #dbdbdb;
+    cursor: pointer;
+}
+
+.item-title {
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5em;
+    height: 20%;
+}
+
+.item-content {
+    padding: 0 25px;
+    height: 45%;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+
+.item-detail {
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-time {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0;
+    color: #A1A1A1;
+}
+
+.item-like {
+    display: flex; 
+    color: #A1A1A1;
+}
+
+.item-like > p {
+    margin-left: 5px;
+}
+
+.post-table {
+    width: 60%;
+}
+
+.post-title-date {
+    border-bottom: 1.8px solid #dbdbdb;
+    border-collapse: collapse;
+}
+.post-title-date td {
+    padding-bottom: 10px;
+}
+
+.post-content {
+    height: 50vh;
+    vertical-align: top;
+}
+.post-content td {
+    padding-top: 40px;
+}
+
+.post-like {
+    text-align: right;
+}
+.last-row {
+    border-bottom: 2px solid #dbdbdb;
+    border-collapse: collapse;
+    height: 20px;
+}
+
+.title-input {
+    font-size: 1em;
+    width: 65%;
+    height: 45px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 0.5px solid #A1A1A1;
+    border-radius: 3px;
+}
+
+.button-row {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    column-gap: 60px;
+}
+
+.grey-button, 
+.green-button,
+.yellow-button {
+    border-radius: 3px;
+    padding: 10px 40px;
+    box-shadow: 0 1px 5px 0 #dbdbdb;
+    cursor: pointer;
+    font-size: 1em;
+}
+.grey-button {
+    background-color: #F8F8FA;
+}
+.green-button {
+    background-color: #acc69f;
+}
+.green-button a,
+.yellow-button a {
+    color: black;
+}
+.yellow-button {
+    background-color: #f8f3cc;
+}
