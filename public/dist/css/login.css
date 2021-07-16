@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    grid-gap: 5rem;
+    place-items: center;
+    margin-top: 150px;
+}

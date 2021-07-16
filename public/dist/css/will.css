@@ -83,14 +83,14 @@ html {
   height: 18em;
 }
 
-#image1,
-#image3,
-#image5 {
+#part1,
+#part3,
+#part5 {
   left: 15%;
 }
 
-#image2,
-#image4 {
+#part2,
+#part4 {
   left: 70%;
 }
 
