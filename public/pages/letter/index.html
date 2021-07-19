@@ -67,38 +67,12 @@
         </div>
         <div class="when">
             <div>언제 도착하는 편지인가요?</div>
-            <!-- <form action="">
-                <select name="year">
-                    <option value="0">연도</option>
-                    <SCRIPT LANGUAGE="JavaScript">
-                        let nowYear=new Date().getFullYear();
-                        for(let i=nowYear;i<=nowYear+10;i++){
-                            document.write("<option value="+i+">"+i+'년');
-                        }
-                    </SCRIPT>
-                </select>
-                <select id="month">
-                    <option value="0">월</option>
-                    <SCRIPT LANGUAGE="JavaScript">
-                        
-                        for(let i=1;i<=12;i++){
-                            document.write("<option value="+i+">"+i+'월');
-                        }
-                    </SCRIPT>
-                </select>
-                <select id="day">
-                    <option value="0">일</option>
-                    <SCRIPT LANGUAGE="JavaScript">
-                        for(let i=1;i<=31;i++){
-                            document.write("<option value="+i+">"+i+'일');
-                        }
-                    </SCRIPT> 
-                </select>  -->
-                <!-- <p>Date: <input type="text" id="datepicker"></p> -->
-                <div class="datepicker">
-                    <input type="text" id="datepicker">
-                </div>
+            <form action="" class="date">
+                <select name="" id="cmbYear" onchange="m_change()"></select>
+                <select name="" id="cmbMonth" onchange="m_change()"></select>
+                <select name="" id="cmbDay"></select>
             </form>
+           
         </div>
         <div class="letter_pad">
             <div class="msg">마음에 드는 편지지를 골라주세요.</div>
@@ -120,13 +94,18 @@
     </section>
     <!--footer-->
     <footer>
-        <div class="logo">You Will</div>
-        <ul>
-            <li>유서</li>
-            <li>편지</li>
-            <li>힐링</li>
-        </ul>
+        <div class="first">
+            <div class="logo">You Will</div>
+            <ul>
+                <li>유서</li>
+                <li>편지</li>
+                <li>힐링</li>
+            </ul>
+        </div>
+        
+        <div class="dum"></div>
     </footer>
+    <script src="/public/dist/js/letter/letter.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>

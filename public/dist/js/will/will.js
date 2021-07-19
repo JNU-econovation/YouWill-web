@@ -1,5 +1,5 @@
 const triggerMargin = 150;
-const potos = document.querySelectorAll('.image');
+const potos = document.querySelectorAll('.part');
 const bottom = document.querySelector('.bottom');
 
 const setLayout = function () {

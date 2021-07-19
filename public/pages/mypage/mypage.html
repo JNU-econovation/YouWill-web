@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You will</title>
+    <link rel="stylesheet" href="/public/dist/css/basic.css">
+    <link rel="stylesheet" href="/public/dist/css/mypage.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="write">
+            <div class="logo"><a href="">You Will</a></div>
+            <ul>
+                <li><a href="/public/pages/will/">유서</a></li>
+                <li><a href="/public/pages/letter/">편지</a></li>
+                <li><a href="/public/pages/healing/">힐링</a></li>
+            </ul>
+        </div>
+        <div class="btn" style="width: 170px;">
+            <button class="login" id="login"><a href="/public/pages/login/">로그인</a></button>
+            <button class="join" id="join"><a href="/public/pages/register/">회원가입</a></button>
+        </div>
+    </header>
+
+    <!--grid-->
+    <div class="grid">
+        <!--sideVar-->
+        <section class="sideVar">
+            <strong class="userName">김이름</strong>
+            <ul class="write_tabs">
+                <strong>작성한 글</strong>
+                <li class="tab active" data-tabNum="0">
+                    <a href="#">유서</a>
+                </li>
+                <li class="tab" data-tabNum="1">
+                    <a href="#">편지</a>
+                </li>
+                <li class="tab" data-tabNum="2">
+                    <a href="#">힐링글</a>
+                </li>
+            </ul>
+            <ul class="userInfo">
+                <strong>내 정보</strong>
+                <li><button>비밀번호 변경</button></li>
+                <li><button>계정 탈퇴</button></li>
+            </ul>
+        </section>
+
+        <!--content-->
+        <section class="contents">
+            <section class="cont" id="tab1">
+                <strong>작성한 유서</strong>
+                <button>example</button>
+            </section>
+            <section class="cont" id="tab2">
+                <strong>작성한 편지</strong>
+                <button>example</button>
+            </section>
+            <section class="cont" id="tab3">
+                <strong>작성한 힐링글</strong>
+                <button>example</button>
+            </section>
+        </section>
+    </div>
+  
+    
+
+    <script src="/public/dist/js/mypage/mypage.js"></script>
+</body>
+</html>

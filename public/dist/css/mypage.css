@@ -1,0 +1,49 @@
+:root {
+  /*color*/
+  --main1: #748e64;
+  --main2: #acc69f;
+  --main3: #a1a1a1;
+  --main4: #f8f3cc;
+  --blue: #6c63ff;
+  --BG1: #f8f8fa;
+  --BG2: #f1f1f5;
+  --error: #ff3120;
+  --font1: #ededed;
+  --font2: #dbdbdb;
+  --font3: #191919;
+}
+
+/*side var*/
+.sideVar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  /* width: 15vw;*/
+  height: 70vh;
+  border-right: 1px solid black;
+  padding: 20% 0;
+}
+
+/**grid**/
+.grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+/*write_tabs*/
+.tab.active a {
+  background-color: yellow;
+}
+.cont {
+  display: none;
+}
+.cont strong,
+button {
+  display: block;
+}
+.cont button {
+  background-color: lightblue;
+  width: 70%;
+}

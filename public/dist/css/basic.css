@@ -22,7 +22,8 @@
 }
 
 html {
-  font-family: 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
+  font-family: "Apple SD Gothic Neo", Roboto, "Noto Sans KR", NanumGothic,
+    "Malgun Gothic", sans-serif;
   letter-spacing: -0.25px;
   font-weight: 400;
   line-height: 1.2;
@@ -177,7 +178,7 @@ button {
 }
 
 a {
-  text-decoration: none;  
+  text-decoration: none;
   color: var(--font3);
 }
 
@@ -188,31 +189,36 @@ ul {
 /*header*/
 /*header-글자*/
 header {
-  margin: 20px 50px;
+  min-width: 570px;
+  margin: 1rem 2rem;
   display: flex;
   justify-content: space-between;
 }
 header .write {
+  width: 20%;
   display: flex;
   justify-content: space-between;
+  min-width: 282px;
+  /* margin: auto; */
   color: var(--font3);
 }
-header .logo {
-  font-size: 20px;
+header .write .logo {
+  font-size: 1.3rem;
   font-weight: bold;
-  padding: 8px;
-  padding-bottom: 0px;
-  border-bottom: 3px solid var(--main2);
+  padding: 0.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.3rem solid var(--main2);
 }
 header ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 header ul li {
-  padding: 8px 12px;
+  padding: 0.5rem;
 }
 /*header-버튼*/
 .btn {
+  width: 45%;
   display: flex;
   justify-content: space-between;
 }
@@ -223,36 +229,45 @@ header ul li {
   text-align: center;
   cursor: pointer;
 }
-#signin {
+#login {
   background-color: white;
 }
-#signup, #mypage {
+#join {
   background-color: var(--main1);
   border-radius: 5px;
 }
-#signup a, #mypage a {
+#join a {
   color: var(--font1);
 }
 
 /*footer*/
 footer {
-  margin: 20px 50px;
+  min-width: 570px;
+  margin: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  width: 300px;
 }
-footer .logo {
-  font-size: 20px;
+footer .first {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  min-width: 282px;
+  /* margin: auto; */
+  color: var(--font3);
+}
+footer .first .logo {
+  font-size: 1.3rem;
   font-weight: bold;
-  vertical-align: middle;
+  padding: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 footer ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
 }
 
-footer li {
-  padding: 8px 12px;
+footer ul li {
+  padding: 0.5rem;
   vertical-align: middle;
 }

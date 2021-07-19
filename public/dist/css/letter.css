@@ -120,7 +120,11 @@ input {
   width: 100%;
   height: 4.5rem;
 }
-.main .datepicker {
+.main .when .date {
+  width: fit-content;
+  min-width: 160px;
+}
+/* .main .datepicker {
   display: flex;
   width: 20vw;
   justify-content: center;
@@ -137,7 +141,7 @@ input {
 
 .main .datepicker input:focus {
   outline: none;
-}
+} */
 
 /*jQuery 사용 x일경우*/
 .main .when form {
@@ -146,7 +150,7 @@ input {
   justify-content: center;
 }
 
-/*letter_pad*/
+/***letter_pad****/
 .letter_pad {
   width: 50%;
   height: 45%;
@@ -242,6 +246,11 @@ input {
   text-align: center;
   font-size: 1.3em;
   color: var(--main1);
+}
+.main_last .buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
 }
 .main_last button {
   display: inline;
