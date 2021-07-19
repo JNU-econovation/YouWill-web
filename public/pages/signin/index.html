@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>You Will</title>
     <link rel="stylesheet" href="../../dist/css/basic.css" />
-    <link rel="stylesheet" href="../../dist/css/login.css" />
+    <link rel="stylesheet" href="../../dist/css/signin.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -18,50 +18,24 @@
     <header>
       <div class="write" style="width: 320px">
         <div class="logo"><a href="../../">You Will</a></div>
-        <ul>xr
+        <ul>
           <li><a href="../../pages/will/">유서</a></li>
           <li><a href="../../pages/letter/">편지</a></li>
           <li><a href="../../pages/healing/">힐링</a></li>
         </ul>
       </div>
       <div class="btn" style="width: 170px">
-        <button class="login" id="login">
-          <a href="../../pages/login/">로그인</a>
+        <button class="signin" id="signin">
+          <a href="../../pages/signin/">로그인</a>
         </button>
-        <button class="join" id="join">
-          <a href="../../pages/register/">회원가입</a>
+        <button class="signup" id="signup">
+          <a href="../../pages/signup/">회원가입</a>
         </button>
       </div>
     </header>
     <div class="container">
       <h2>로그인</h2>
-      <button type="button" id="login" onclick="googleLogin()">
-        구글로 시작하기
-      </button>
-      <div>
-        <button
-          type="button"
-          id="login"
-          style="display: none"
-          onclick="googlelogIn()"
-        >
-          Social Login
-        </button>
-        <div id="profile" style="display: none" alt="User Image">
-          <img id="profile_img" src="" alt="User Image" />
-        </div>
-        <div id="profile_info" style="display: none">
-          <a id="profile_name" href="#"></a>
-        </div>
-        <button
-          type="button"
-          style="display: none"
-          id="logout"
-          onclick="logout()"
-        >
-          LogOut
-        </button>
-      </div>
+      <button type="button" id="signin-btn" onclick="googleLogin()">구글로 시작하기</button>
     </div>
     <footer>
       <div class="logo">You Will</div>
@@ -71,10 +45,10 @@
         <li>힐링</li>
       </ul>
     </footer>
-    <script src="../../dist/js/login.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../../dist/js/signin.js"></script>
   </body>
 </html>

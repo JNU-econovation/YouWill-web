@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You Will</title>
-    <link rel="stylesheet" href="/public/dist/css/basic.css">
-    <link rel="stylesheet" href="/public/dist/css/letter.css">
+    <link rel="stylesheet" href="../../dist/css/basic.css">
+    <link rel="stylesheet" href="../../dist/css/letter.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
@@ -32,16 +32,16 @@
     <!--header-->
     <header>
         <div class="write" style="width:320px">
-            <div class="logo"><a href="/public/">You Will</a></div>
+            <div class="logo"><a href="../../">You Will</a></div>
             <ul>
-                <li><a href="/public/pages/will/">유서</a></li>
-                <li><a href="/public/pages/letter/">편지</a></li>
-                <li><a href="/public/pages/healing/">힐링</a></li>
+                <li><a href="../../pages/will/">유서</a></li>
+                <li><a href="../../pages/letter/">편지</a></li>
+                <li><a href="../../pages/healing/">힐링</a></li>
             </ul>
         </div>
         <div class="btn" style="width: 170px;">
-            <button class="login" id="login"><a href="/public/pages/login/">로그인</a></button>
-            <button class="join" id="join"><a href="/public/pages/register/">회원가입</a></button>
+            <button class="signin" id="signin"><a href="../../pages/signin/">로그인</a></button>
+            <button class="signup" id="signup"><a href="../../pages/register/">회원가입</a></button>
         </div>
     </header>
     </header>
@@ -127,5 +127,10 @@
             <li>힐링</li>
         </ul>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../../dist/js/signin.js"></script>
 </body>
 </html>

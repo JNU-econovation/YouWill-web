@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You Will</title>
-    <link rel="stylesheet" href="/public/dist/css/basic.css">
-    <link rel="stylesheet" href="/public/dist/css/will.css">
+    <link rel="stylesheet" href="../../dist/css/basic.css">
+    <link rel="stylesheet" href="../../dist/css/will.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 <body>
     <!--header-->
     <header>
         <div class="write" style="width:320px">
-            <div class="logo"><a href="/public/">You Will</a></div>
+            <div class="logo"><a href="../../">You Will</a></div>
             <ul>
-                <li><a href="/public/pages/will/">유서</a></li>
-                <li><a href="/public/pages/letter/">편지</a></li>
-                <li><a href="/public/pages/healing/">힐링</a></li>
+                <li><a href="../../pages/will/">유서</a></li>
+                <li><a href="../../pages/letter/">편지</a></li>
+                <li><a href="../../pages/healing/">힐링</a></li>
             </ul>
         </div>
         <div class="btn" style="width: 170px;">
-            <button class="login" id="login"><a href="/public/pages/login/">로그인</a></button>
-            <button class="join" id="join"><a href="/public/pages/register/">회원가입</a></button>
+            <button class="signin" id="signin"><a href="../../pages/signin/">로그인</a></button>
+            <button class="signup" id="signup"><a href="../../pages/register/">회원가입</a></button>
         </div>
     </header>
     <!--logo-->
@@ -34,23 +34,23 @@
     <div class="scroll">
         <div class="part" id="part1">
             <strong>어릴 때 좋아하던 놀이가 있었나요?</strong>
-            <img class="hidden" src="/public/dist/img/유서_1.png" alt="will">
+            <img class="hidden" src="../../dist/img/유서_1.png" alt="will">
         </div>
         <div class="part" id="part2">
             <strong>학창 시절 즐겨 듣던 노래가 있었나요?</strong>
-            <img class="hidden" src="/public/dist/img/유서_2.png" alt="will">
+            <img class="hidden" src="../../dist/img/유서_2.png" alt="will">
         </div>
         <div class="part" id="part3">
             <strong>살면서 무언가에 열정적이었던 순간이 있었나요?</strong>
-            <img class="hidden" src="/public/dist/img/유서_3.png" alt="will">
+            <img class="hidden" src="../../dist/img/유서_3.png" alt="will">
         </div>
         <div class="part" id="part4">
             <strong>매일 밤 잠들기 전 떠오르는 생각이 있나요?</strong>
-            <img  class="hidden" src="/public/dist/img/유서_4.png" alt="will">
+            <img  class="hidden" src="../../dist/img/유서_4.png" alt="will">
         </div>
         <div class="part" id="part5">
             <strong>당신의 마지막은 누구와 함께 있고 싶나요?</strong>
-            <img class="hidden" src="/public/dist/img/유서_5.png" alt="will">
+            <img class="hidden" src="../../dist/img/유서_5.png" alt="will">
         </div>
     </div>
     <!--bottom-->
@@ -61,7 +61,11 @@
         </div>
         <button><a href="#">유서 쓰기</a></button>
     </section>
-    <script src="/public/dist/js/will/will.js"></script>
-    <!-- <script src="/js/will/animation.js"></script> -->
+    <script src="../../dist/js/will/will.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../../dist/js/signin.js"></script>
 </body>
 </html>
