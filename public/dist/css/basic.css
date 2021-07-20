@@ -229,14 +229,14 @@ header ul li {
   text-align: center;
   cursor: pointer;
 }
-#login {
+#signin {
   background-color: white;
 }
-#join {
+#signup, #mypage {
   background-color: var(--main1);
   border-radius: 5px;
 }
-#join a {
+#signup a {
   color: var(--font1);
 }
 
