@@ -287,6 +287,38 @@ input {
   cursor: pointer;
 }
 
+.post-table {
+  width: 60%;
+}
+
+.post-title-date {
+  border-bottom: 1.8px solid #dbdbdb;
+  border-collapse: collapse;
+}
+
+.post-title-date td {
+  padding-bottom: 10px;
+}
+
+.post-content {
+  height: 50vh;
+  vertical-align: top;
+}
+
+.post-content td {
+  padding-top: 40px;
+}
+
+.post-like {
+  text-align: right;
+}
+
+.last-row {
+  border-bottom: 2px solid #dbdbdb;
+  border-collapse: collapse;
+  height: 20px;
+}
+
 .title-input {
   font-size: 1em;
   width: 65%;
