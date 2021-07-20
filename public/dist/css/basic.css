@@ -232,9 +232,11 @@ header ul li {
 #signin {
   background-color: white;
 }
-#signup, #mypage {
+#signup,
+#mypage {
   background-color: var(--main1);
   border-radius: 5px;
+  color: white;
 }
 #signup a {
   color: var(--font1);
