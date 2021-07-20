@@ -76,7 +76,7 @@
         </div>
         <div class="letter_pad">
             <div class="msg">마음에 드는 편지지를 골라주세요.</div>
-            <div class="container">
+            <div class="pad-list">
                 <!-- TODO: 동적 생성(JS) -->
                 <div class="item">A</div>
                 <div class="item">B</div>
@@ -90,7 +90,7 @@
     <!--saveAndWrite-->
     <section class="saveAndWrite">
         <button class="save"><a href="#">저장</a></button>
-        <button class="goToWrite"><a href="#">편지 작성하러 가기</a></button>
+        <button class="goToWrite" onclick="location.href='../letter/letter_write.html'">편지 작성하러 가기</button>
     </section>
     <!--footer-->
     <footer>
@@ -102,7 +102,6 @@
                 <li>힐링</li>
             </ul>
         </div>
-        
         <div class="dum"></div>
     </footer>
     <script src="../../dist/js/letter/letter.js"></script>
