@@ -64,17 +64,16 @@
 }
 
 .item-title {
-    padding: 25px;
-    font-size: 20px;
+    padding: 25px 25px 15px 25px;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.5em;
-    height: 20%;
 }
 
 .item-content {
     padding: 0 25px;
     height: 45%;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 1.4em;
 }
 
@@ -166,4 +165,16 @@
 }
 .yellow-button {
     background-color: #f8f3cc;
+}
+
+@media (max-width: 1255px) {
+    .healing-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 945px) {
+    .healing-preview {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
