@@ -149,3 +149,90 @@ html {
   height: 45px;
   min-width: 200px;
 }
+
+.container {
+  display: grid;
+  grid-gap: 5rem;
+  place-items: center;
+  margin-top: 150px;
+}
+
+.category-intro {
+  text-align: center;
+}
+
+.category-name {
+  font-size: 1.8rem;
+  color: #748e64;
+  margin-bottom: 20px;
+}
+
+.icon-pencil {
+  color: #ACC69F;
+  cursor: pointer;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  column-gap: 60px;
+}
+
+.grey-button,
+.green-button,
+.yellow-button {
+  border-radius: 3px;
+  padding: 10px 40px;
+  box-shadow: 0 1px 5px 0 #dbdbdb;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.grey-button {
+  background-color: #F8F8FA;
+}
+
+.green-button {
+  background-color: #acc69f;
+}
+
+.green-button a,
+.yellow-button a {
+  color: black;
+}
+
+.yellow-button {
+  background-color: #f8f3cc;
+}
+
+.post-table {
+  width: 60%;
+}
+
+.post-title-date {
+  border-bottom: 1.8px solid #dbdbdb;
+  border-collapse: collapse;
+}
+
+.post-title-date td {
+  padding-bottom: 10px;
+}
+
+.post-content {
+  height: 50vh;
+  vertical-align: top;
+}
+
+.post-content td {
+  padding-top: 40px;
+}
+
+.post-like {
+  text-align: right;
+}
+
+.last-row {
+  border-bottom: 2px solid #dbdbdb;
+  border-collapse: collapse;
+  height: 20px;
+}
