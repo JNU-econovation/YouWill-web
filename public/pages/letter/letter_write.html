@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ko" dir="ltr">
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>You Will</title>
+    <link rel="stylesheet" href="../../dist/css/basic.css">
+    <link rel="stylesheet" href="../../dist/css/letter.css">
+    <link rel="stylesheet" href="../../editor/sample/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" href="../../css/healing.css">
-	<title>You Will</title>
 </head>
 <body data-editor="ClassicEditor" data-collaboration="false">
 	<header>
-        <h2 class="logo">You Will</h2>
-        <nav class="nav nav-category">
+        <div class="write" style="width:320px">
+            <div class="logo"><a href="../../">You Will</a></div>
             <ul>
-                <li>유서</li>
-                <li>편지</li>
-                <li class="current-page"><a href="../../html/healing/healing_main.html">힐링</a></li>
+                <li><a href="../../pages/will/">유서</a></li>
+                <li><a href="../../pages/letter/">편지</a></li>
+                <li><a href="../../pages/healing/">힐링</a></li>
             </ul>
-        </nav>
-        <nav class="nav nav-auth">
-            <ul>
-                <li>로그인</li>
-                <li class="button-signup">회원가입</li>
-            </ul>
-        </nav>
+        </div>
+        <div class="btn" style="width: 170px;">
+            <button class="signin" id="signin"><a href="../../pages/signin/">로그인</a></button>
+            <button class="signup" id="signup"><a href="../../pages/register/">회원가입</a></button>
+        </div>
     </header>
 	<class class="container">
 		<div class="category-intro">
-            <h3 class="category-name">힐링</h3>
+            <h3 class="category-name">편지</h3>
             <i class="fas fa-pencil-alt fa-3x icon-pencil"></i>
         </div>
 		<input type="text" minlength="1" class="title-input" placeholder="제목을 입력하세요.">
@@ -43,20 +42,21 @@
 		</div>
 		<div class="button-row">
             <button class="grey-button">저장</button>
-            <button class="yellow-button"><a href="../../html/healing/healing_detail.html">작성 완료</a></button>
+            <button class="yellow-button" onclick="location.href='letter_last.html'">작성 완료</button>
         </div>
 	</main>
 	<footer>
-        <h2 class="logo">You Will</h2>
-        <nav class="nav nav-category">
+        <div class="first">
+            <div class="logo">You Will</div>
             <ul>
                 <li>유서</li>
                 <li>편지</li>
                 <li>힐링</li>
             </ul>
-        </nav>
+        </div>
+        <div class="dum"></div>
     </footer>
-	<script src="../build/ckeditor.js"></script>
+	<script src="../../editor/build/ckeditor.js"></script>
 	<script>ClassicEditor.create( document.querySelector( '.editor' ), {
 			toolbar: {
 				items: [

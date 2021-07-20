@@ -159,7 +159,7 @@ input {
   text-align: center;
   margin-bottom: 5em;
 }
-.letter_pad .container {
+.letter_pad .pad-list {
   width: 100%;
   height: 90%;
 
@@ -174,7 +174,7 @@ input {
   justify-content: center;
 }
 
-.letter_pad .container .item {
+.letter_pad .pad-list .item {
   border: 1px solid black;
 }
 /*saveAndWrite*/
@@ -263,4 +263,69 @@ input {
   height: 3rem;
   padding: 0.5rem 2rem;
   cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-gap: 5rem;
+  place-items: center;
+  margin-top: 150px;
+}
+
+.category-intro {
+  text-align: center;
+}
+
+.category-name {
+  font-size: 1.8rem;
+  color: #748e64;
+  margin-bottom: 20px;
+}
+
+.icon-pencil {
+  color: #ACC69F;
+  cursor: pointer;
+}
+
+.title-input {
+  font-size: 1em;
+  width: 65%;
+  height: 45px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 0.5px solid #A1A1A1;
+  border-radius: 3px;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  column-gap: 60px;
+}
+
+.grey-button,
+.green-button,
+.yellow-button {
+  border-radius: 3px;
+  padding: 10px 40px;
+  box-shadow: 0 1px 5px 0 #dbdbdb;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.grey-button {
+  background-color: #F8F8FA;
+}
+
+.green-button {
+  background-color: #acc69f;
+}
+
+.green-button a,
+.yellow-button a {
+  color: black;
+}
+
+.yellow-button {
+  background-color: #f8f3cc;
 }
