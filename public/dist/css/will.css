@@ -91,7 +91,23 @@ html {
 
 #part2,
 #part4 {
-  left: 70%;
+  left: 65%;
+}
+@media screen and (max-width: 835px) {
+  .scroll {
+    height: 250rem;
+  }
+  .scroll .part {
+    height: 20rem;
+  }
+  .scroll img {
+    width: 16em;
+    height: 14em;
+  }
+  #part2,
+  #part4 {
+    left: 18%;
+  }
 }
 
 /*scroll 애니메이션 이전 버전*/
@@ -168,7 +184,7 @@ html {
 }
 
 .icon-pencil {
-  color: #ACC69F;
+  color: #acc69f;
   cursor: pointer;
 }
 
@@ -189,7 +205,7 @@ html {
 }
 
 .grey-button {
-  background-color: #F8F8FA;
+  background-color: #f8f8fa;
 }
 
 .green-button {
