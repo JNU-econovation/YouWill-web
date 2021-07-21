@@ -17,33 +17,62 @@
 .sideVar {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  text-align: left;
 
-  /* width: 15vw;*/
-  height: 70vh;
+  height: 50vh;
   border-right: 1px solid black;
   padding: 20% 0;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  min-width: 154px;
+}
+.write_tabs .tab {
+  margin-bottom: 0.5rem;
 }
 
 /**grid**/
 .grid {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 20% 1fr;
 }
 
 /*write_tabs*/
 .tab.active a {
-  background-color: yellow;
+  display: block;
+  background-color: var(--BG2);
 }
 .cont {
   display: none;
 }
-.cont strong,
-button {
-  display: block;
+
+/*content*/
+.contents .cont {
+  margin-left: 5rem;
+  margin-top: 7rem;
 }
-.cont button {
-  background-color: lightblue;
-  width: 70%;
+.contents .cont strong {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.contents .cont a {
+  display: block;
+  background-color: var(--BG2);
+  width: 60%;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.5rem gray;
+  min-width: 447px;
+}
+.contents .cont a .title {
+  margin-left: 1rem;
+}
+.contents .cont a .date {
+  margin-right: 1rem;
 }
