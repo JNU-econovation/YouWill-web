@@ -1,6 +1,4 @@
-const firebaseConfig = {
-  // ADD YOUR CONFIGURATION
-};
+const firebaseConfig = {};
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
