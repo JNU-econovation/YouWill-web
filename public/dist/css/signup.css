@@ -1,0 +1,69 @@
+.container {
+    display: grid;
+    grid-gap: 2.5rem;
+    place-items: center;
+    padding: 5% 0;
+}
+
+.title {
+    margin-right: 325px;
+}
+
+form {
+    display: grid;
+    grid-row-gap: 2rem;
+}
+form div {
+    display: grid;
+    grid-gap: 5px;
+}
+label {
+    font-size: 16px;
+}
+input {
+    font-size: 15px;
+    border: 0.7px solid #DBDBDB;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+}
+.input {
+    width: 400px;
+}
+.input-row {
+    display: block;
+}
+.input-small {
+    width: 330px;
+}
+
+.warning-msg {
+    color: #A1A1A1;
+    font-size: 15px;
+}
+.error-msg {
+    color: red;
+    font-size: 13px;
+}
+.check-btn {
+    border: 0.7px solid #ACC69F;
+    border-radius: 3px;
+    background: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 5px;
+    color: #ACC69F;
+}
+.signup-btn {
+    border-radius: 3px;
+    width: 400px;
+    padding: 10px 40px;
+    font-weight: 600;
+    font-size: 17px;
+    background: #acc69f;
+    color: #fff;
+    box-shadow: 0 3px 7px 0 #dbdbdb;
+}
+.signup-btn:hover {
+    background: #748e64;
+}

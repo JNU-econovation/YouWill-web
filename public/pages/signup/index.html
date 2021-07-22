@@ -27,22 +27,39 @@
         </div>
     </header>
     <div class="container">
-        <div class="category-intro">
-            <h3 class="category-name">회원가입</h3>
+        <h2 class="title">회원가입</h2>
+        <form>
+            <div>
+                <label>이름</label>
+                <div>
+                    <input type="text" class="input" placeholder="이름">
+                    <p class="error-msg"></p>
+                </div>
+            </div>
+            <div>
+                <label>이메일</label>
+                <div class="input-row">
+                    <input type="email" class="input-small" placeholder="example@example.com">
+                    <button class="check-btn">중복확인</button>
+                </div>
+                <p class="error-msg"></p>
+            </div>
+            <div>
+                <label>비밀번호</label>
+                <input type="password" lang="en" class="input" placeholder="********">
+                <small class="warning-msg"><i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;영문 대문자/소문자, 숫자, 특수문자 중 2가지 이상 조합, 8~32자</small>
+                <p class="error-msg"></p>
+            </div>
+            <div>
+                <label>비밀번호 확인</label>
+                <input type="password" lang="en" class="input" placeholder="********">
+                <p class="error-msg"></p>
+            </div>
+        </form>
+        <div>
+            <button type="submit" class="signup-btn">가입하기</button>
         </div>
-        
     </div>
-    <footer>
-        <div class="first">
-            <div class="logo">You Will</div>
-            <ul>
-                <li>유서</li>
-                <li>편지</li>
-                <li>힐링</li>
-            </ul>
-        </div>
-        <div class="dum"></div>
-    </footer>
     <script src="../../dist/js/signup/signup.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
