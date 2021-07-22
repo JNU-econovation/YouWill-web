@@ -1,3 +1,6 @@
+const signinBtn = document.getElementById('signin');
+const signupBtn = document.getElementById('signup');
+
 const firebaseConfig = {};
 
 firebase.initializeApp(firebaseConfig);
@@ -5,18 +8,33 @@ firebase.analytics();
 
 document.addEventListener('DOMContentLoaded', function () {
   firebase.auth().onAuthStateChanged(function (user) {
+    const target = window.location.pathname === '/' ? 'pages' : '..';
     if (user) {
-      if (window.location.pathname == '/pages/signin/') {
+      if (
+        window.location.pathname === '/pages/signin/' ||
+        window.location.pathname === '/pages/signup/'
+      ) {
         window.location.href = '/';
       }
-      document.getElementById('signin').id = 'signout';
-      document.getElementById('signout').textContent = '로그아웃';
-      document.getElementById('signout').onclick = signout;
-      document.getElementById('signup').id = 'mypage';
-      document.getElementById('mypage').textContent = '마이페이지';
-      // 마이페이지로 이동하도록 href 변경하기
+      signinBtn.textContent = '로그아웃';
+      signinBtn.onclick = signout;
+      signupBtn.textContent = '마이페이지';
+      signupBtn.setAttribute(
+        'onclick',
+        "location.href='" + target + "/mypage/mypage.html'"
+      );
     } else {
       console.log('not signin');
+      signinBtn.textContent = '로그인';
+      signinBtn.setAttribute(
+        'onclick',
+        "location.href='" + target + "/signin/'"
+      );
+      signupBtn.textContent = '회원가입';
+      signupBtn.setAttribute(
+        'onclick',
+        "location.href='" + target + "/signup/'"
+      );
     }
   });
 });
@@ -45,6 +63,22 @@ function googleLogin() {
     });
 }
 
+function signin() {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Signed in
+      var user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ..
+    });
+}
+
 function signout() {
   firebase
     .auth()
@@ -53,12 +87,4 @@ function signout() {
       function () {},
       function (error) {}
     );
-  document.getElementById('signout').onclick = () => {
-    location.href = '../../pages/signin/';
-  };
-  document.getElementById('signout').id = 'signin';
-  document.getElementById('signin').textContent = '로그인';
-  document.getElementById('mypage').id = 'signup';
-  document.getElementById('signup').textContent = '회원가입';
-  // 마이페이지로 이동하도록 href 설정(onclick)하기;
 }
