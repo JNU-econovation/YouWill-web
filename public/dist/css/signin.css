@@ -1,6 +1,71 @@
 .container {
     display: grid;
-    grid-gap: 5rem;
+    grid-gap: 2.5rem;
     place-items: center;
-    margin-top: 150px;
+    padding: 4% 0;
+}
+
+.title {
+    margin-right: 335px;
+}
+
+form {
+    display: grid;
+    grid-row-gap: 1.2rem;
+}
+
+form div {
+    display: grid;
+    grid-gap: 5px;
+}
+
+label {
+    font-size: 16px;
+}
+
+input {
+    font-size: 15px;
+    border: 0.7px solid #DBDBDB;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+}
+
+.input {
+    width: 400px;
+}
+
+.input-row {
+    display: block;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+}
+
+.signin-btn {
+    border-radius: 3px;
+    width: 400px;
+    padding: 10px 40px;
+    font-weight: 600;
+    font-size: 17px;
+    background: #acc69f;
+    color: #fff;
+    box-shadow: 0 3px 7px 0 #dbdbdb;
+}
+
+.signup-btn:hover {
+    background: #748e64;
+}
+
+.login-option {
+    display: flex;
+    justify-content: space-between;
+}
+.login-option p,
+.login-option p a {
+    font-size: 0.9rem;
+    color: #A1A1A1;
+    cursor: pointer;
 }

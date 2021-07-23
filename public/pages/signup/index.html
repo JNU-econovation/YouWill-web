@@ -33,32 +33,32 @@
             <div>
                 <label>이름</label>
                 <div>
-                    <input type="text" class="input" placeholder="이름">
-                    <p class="error-msg"></p>
+                    <input type="text" class="input" id="name" placeholder="이름">
+                    <p class="error-msg" id="name-error"></p>
                 </div>
             </div>
             <div>
                 <label>이메일</label>
                 <div class="input-row">
-                    <input type="email" class="input-small" placeholder="example@example.com">
-                    <button class="check-btn">중복확인</button>
+                    <input type="email" class="input-small" id="email" placeholder="example@example.com">
+                    <button class="check-btn" id="check-btn">중복확인</button>
                 </div>
-                <p class="error-msg"></p>
+                <p class="error-msg" id="email-error"></p>
             </div>
             <div>
                 <label>비밀번호</label>
-                <input type="password" lang="en" class="input" placeholder="********">
+                <input type="password" lang="en" class="input" id="password" placeholder="********">
                 <small class="warning-msg"><i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;영문 대문자/소문자, 숫자, 특수문자 중 2가지 이상 조합, 8~32자</small>
-                <p class="error-msg"></p>
+                <p class="error-msg" id="password-error"></p>
             </div>
             <div>
                 <label>비밀번호 확인</label>
-                <input type="password" lang="en" class="input" placeholder="********">
-                <p class="error-msg"></p>
+                <input type="password" lang="en" class="input" id="password-check" placeholder="********">
+                <p class="error-msg" id="password-check-error"></p>
             </div>
         </form>
         <div>
-            <button type="submit" class="signup-btn">가입하기</button>
+            <button type="submit" class="signup-btn" id="signup-btn" onclick="signin()">가입하기</button>
         </div>
     </div>
     <script src="../../dist/js/signup/signup.js"></script>
