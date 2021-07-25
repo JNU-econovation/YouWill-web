@@ -6,23 +6,20 @@
 }
 
 .title {
-    margin-right: 335px;
+    margin-right: 325px;
 }
 
 form {
     display: grid;
-    grid-row-gap: 1.2rem;
+    grid-row-gap: 2rem;
 }
-
 form div {
     display: grid;
     grid-gap: 5px;
 }
-
 label {
     font-size: 16px;
 }
-
 input {
     font-size: 15px;
     border: 0.7px solid #DBDBDB;
@@ -30,21 +27,34 @@ input {
     padding: 10px;
     color: #000;
 }
-
 .input {
     width: 400px;
 }
-
 .input-row {
     display: block;
 }
+.input-small {
+    width: 330px;
+}
 
+.warning-msg {
+    color: #A1A1A1;
+    font-size: 15px;
+}
 .error-msg {
     color: red;
     font-size: 13px;
 }
-
-.signin-btn {
+.check-btn {
+    border: 0.7px solid #ACC69F;
+    border-radius: 3px;
+    background: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 5px;
+    color: #ACC69F;
+}
+.signup-btn {
     border-radius: 3px;
     width: 400px;
     padding: 10px 40px;
@@ -54,18 +64,6 @@ input {
     color: #fff;
     box-shadow: 0 3px 7px 0 #dbdbdb;
 }
-
 .signup-btn:hover {
     background: #748e64;
-}
-
-.login-option {
-    display: flex;
-    justify-content: space-between;
-}
-.login-option p,
-.login-option p a {
-    font-size: 0.9rem;
-    color: #A1A1A1;
-    cursor: pointer;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,26 +25,37 @@
         </ul>
       </div>
       <div class="btn" style="width: 170px">
-        <button class="signin" id="signin" onclick="location.href='../signin/'">로그인</button>
-        <button class="signup" id="signup" onclick="location.href='../signup/'">회원가입</button>
+        <button class="signin" id="signin"></button>
+        <button class="signup" id="signup"></button>
       </div>
     </header>
     <div class="container">
-      <h2>로그인</h2>
+      <h2 class="title">로그인</h2>
       <button type="button" id="signin-btn" onclick="googleLogin()">구글로 시작하기</button>
+      <form>
+        <div>
+            <label>이메일</label>
+            <input type="email" class="input-small" id="email" placeholder="example@example.com">
+            <p class="error-msg" id="email-error"></p>
+        </div>
+        <div>
+            <label>비밀번호</label>
+            <input type="password" lang="en" class="input" id="password" placeholder="********">
+            <p class="error-msg" id="password-error"></p>
+        </div>
+        <div class="login-option">
+          <p>비밀번호를 잊으셨나요?</p>
+          <p><a href="../signup/">회원가입</a></p>
+        </div>
+        <div>
+            <button type="submit" class="signin-btn" id="signin-btn" onclick="signin()">로그인</button>
+        </div>
+      </form>
     </div>
-    <footer>
-      <div class="logo">You Will</div>
-      <ul>
-        <li>유서</li>
-        <li>편지</li>
-        <li>힐링</li>
-      </ul>
-    </footer>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
-    <script src="../../dist/js/signin.js"></script>
+    <script src="../../dist/js/auth.js"></script>
   </body>
 </html>

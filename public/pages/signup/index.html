@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Will</title>
+    <link rel="stylesheet" href="../../dist/css/basic.css">
+    <link rel="stylesheet" href="../../dist/css/signup.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="write" style="width:320px">
+            <div class="logo"><a href="/">You Will</a></div>
+            <ul>
+                <li><a href="../will/">유서</a></li>
+                <li><a href="../letter/">편지</a></li>
+                <li><a href="../healing/">힐링</a></li>
+            </ul>
+        </div>
+        <div class="btn" style="width: 170px;">
+            <button class="signin" id="signin"></button>
+            <button class="signup" id="signup"></button>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="title">회원가입</h2>
+        <button type="button" id="signin-btn" onclick="googleLogin()">구글로 시작하기</button>
+        <form>
+            <div>
+                <label>이름</label>
+                <div>
+                    <input type="text" class="input" id="name" placeholder="이름">
+                    <p class="error-msg" id="name-error"></p>
+                </div>
+            </div>
+            <div>
+                <label>이메일</label>
+                <div class="input-row">
+                    <input type="email" class="input-small" id="email" placeholder="example@example.com">
+                    <button class="check-btn" id="check-btn">중복확인</button>
+                </div>
+                <p class="error-msg" id="email-error"></p>
+            </div>
+            <div>
+                <label>비밀번호</label>
+                <input type="password" lang="en" class="input" id="password" placeholder="********">
+                <small class="warning-msg"><i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;영문 대문자/소문자, 숫자, 특수문자 중 2가지 이상 조합, 8~32자</small>
+                <p class="error-msg" id="password-error"></p>
+            </div>
+            <div>
+                <label>비밀번호 확인</label>
+                <input type="password" lang="en" class="input" id="password-check" placeholder="********">
+                <p class="error-msg" id="password-check-error"></p>
+            </div>
+        </form>
+        <div>
+            <button type="submit" class="signup-btn" id="signup-btn" onclick="signin()">가입하기</button>
+        </div>
+    </div>
+    <script src="../../dist/js/signup/signup.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../../dist/js/auth.js"></script>
+</body>
+</html>

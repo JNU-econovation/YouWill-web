@@ -41,8 +41,8 @@
 			</div>
 		</div>
 		<div class="button-row">
-            <button class="grey-button" onclick="location.href='../mypage/mypage.html'">저장</button>
-            <button class="yellow-button" onclick="location.href='letter_detail.html'">작성 완료</button>
+            <button class="signin" id="signin"></button>
+            <button class="signup" id="signup"></button>
         </div>
 	</main>
 	<footer>
@@ -105,5 +105,10 @@
 				console.error( error );
 			} );
 	</script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../../dist/js/auth.js"></script>
 </body>
 </html>
