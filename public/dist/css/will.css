@@ -58,13 +58,13 @@ html {
 
 .scroll div {
   width: fit-content;
-  /* height: fit-content; */
+
   height: 25em;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+
   justify-content: space-between;
 
   position: relative;
@@ -109,21 +109,6 @@ html {
     left: 18%;
   }
 }
-
-/*scroll 애니메이션 이전 버전*/
-/* .fade-in {
-  animation-name: fade-in;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
 
 /*bottom*/
 .bottom {
@@ -251,4 +236,19 @@ html {
   border-bottom: 2px solid #dbdbdb;
   border-collapse: collapse;
   height: 20px;
+}
+
+/*토스트메시지*/
+
+.tost {
+  width: 20%;
+  height: 30%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  z-index: 100;
+
+  display: none;
 }

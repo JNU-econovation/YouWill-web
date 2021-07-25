@@ -283,7 +283,7 @@ input {
 }
 
 .icon-pencil {
-  color: #ACC69F;
+  color: #acc69f;
   cursor: pointer;
 }
 
@@ -325,7 +325,7 @@ input {
   height: 45px;
   padding-left: 10px;
   border: none;
-  border-bottom: 0.5px solid #A1A1A1;
+  border-bottom: 0.5px solid #a1a1a1;
   border-radius: 3px;
 }
 
@@ -346,7 +346,7 @@ input {
 }
 
 .grey-button {
-  background-color: #F8F8FA;
+  background-color: #f8f8fa;
 }
 
 .green-button {

@@ -32,9 +32,7 @@ function m_change(){
     }
     for(let i=0;i<=lastDay-1;i++){
         cmbDay.options[i]=new Option(i+1+'일',i+1);
-    }
-
-    
+    }   
 }
 
 
