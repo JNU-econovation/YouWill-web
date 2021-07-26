@@ -22,8 +22,8 @@
   text-align: left;
 
   height: 50vh;
-  border-right: 1px solid black;
-  padding: 20% 0;
+  /* border-right: 1px solid black;
+  padding: 20% 0; */
   margin-top: 2rem;
   margin-left: 5rem;
   min-width: 154px;
@@ -36,6 +36,8 @@
 .grid {
   display: grid;
   grid-template-columns: 20% 1fr;
+  margin-top: 5rem;
+  column-gap: 3em;
 }
 
 /*write_tabs*/
@@ -43,15 +45,19 @@
   display: block;
   background-color: var(--BG2);
 }
+
+/*content*/
 .cont {
   display: none;
 }
-
-/*content*/
+.contents .cont:first-child {
+  display: block;
+}
 .contents .cont {
   margin-left: 5rem;
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
+
 .contents .cont strong {
   display: block;
   margin-bottom: 1.5rem;

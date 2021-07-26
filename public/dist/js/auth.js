@@ -1,7 +1,16 @@
 const signinBtn = document.getElementById('signin');
 const signupBtn = document.getElementById('signup');
 
-const firebaseConfig = {};
+const firebaseConfig = {
+  apiKey: "AIzaSyC3IBWiBpkJrbTUDjZghmI6lhsAwZTyCzQ",
+  authDomain: "youwill-ab07b.firebaseapp.com",
+  databaseURL: "https://youwill-ab07b-default-rtdb.firebaseio.com",
+  projectId: "youwill-ab07b",
+  storageBucket: "youwill-ab07b.appspot.com",
+  messagingSenderId: "911679109781",
+  appId: "1:911679109781:web:0d175c565313132dc1b99c",
+  measurementId: "G-NLLD2DRTLL"
+};
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
