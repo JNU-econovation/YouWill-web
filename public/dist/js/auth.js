@@ -1,5 +1,5 @@
-const signinBtn = document.getElementById('signin');
-const signupBtn = document.getElementById('signup');
+const signinGNB = document.getElementById('signin');
+const signupGNB = document.getElementById('signup');
 
 const firebaseConfig = {};
 
@@ -16,22 +16,22 @@ document.addEventListener('DOMContentLoaded', function () {
       ) {
         window.location.href = '/';
       }
-      signinBtn.textContent = '로그아웃';
-      signinBtn.onclick = signout;
-      signupBtn.textContent = '마이페이지';
-      signupBtn.setAttribute(
+      signinGNB.textContent = '로그아웃';
+      signinGNB.onclick = signout;
+      signupGNB.textContent = '마이페이지';
+      signupGNB.setAttribute(
         'onclick',
         "location.href='" + target + "/mypage/mypage.html'"
       );
     } else {
       console.log('not signin');
-      signinBtn.textContent = '로그인';
-      signinBtn.setAttribute(
+      signinGNB.textContent = '로그인';
+      signinGNB.setAttribute(
         'onclick',
         "location.href='" + target + "/signin/'"
       );
-      signupBtn.textContent = '회원가입';
-      signupBtn.setAttribute(
+      signupGNB.textContent = '회원가입';
+      signupGNB.setAttribute(
         'onclick',
         "location.href='" + target + "/signup/'"
       );
@@ -63,19 +63,37 @@ function googleLogin() {
     });
 }
 
-function signin() {
+function signup(email, password) {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Signed in
       var user = userCredential.user;
-      // ...
+      alert('회원가입이 완료되었습니다.');
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      // ..
+      if (errorCode === 'auth/email-already-in-use') {
+        alert('이미 등록된 이메일입니다. 로그인 페이지로 이동합니다.');
+        window.location.href = '../signin/';
+      }
+    });
+}
+
+function signin(email, password) {
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      var user = userCredential.user;
+      console.log('로그인 성공');
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
     });
 }
 

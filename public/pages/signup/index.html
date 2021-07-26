@@ -28,7 +28,7 @@
     </header>
     <div class="container">
         <h2 class="title">회원가입</h2>
-        <button type="button" id="signin-btn" onclick="googleLogin()">구글로 시작하기</button>
+        <button type="button" onclick="googleLogin()">구글로 시작하기</button>
         <form>
             <div>
                 <label>이름</label>
@@ -40,8 +40,7 @@
             <div>
                 <label>이메일</label>
                 <div class="input-row">
-                    <input type="email" class="input-small" id="email" placeholder="example@example.com">
-                    <button class="check-btn" id="check-btn">중복확인</button>
+                    <input type="email" class="input" id="email" placeholder="example@example.com">
                 </div>
                 <p class="error-msg" id="email-error"></p>
             </div>
@@ -58,7 +57,7 @@
             </div>
         </form>
         <div>
-            <button type="submit" class="signup-btn" id="signup-btn" onclick="signin()">가입하기</button>
+            <button type="submit" class="signup-btn" id="signup-btn">가입하기</button>
         </div>
     </div>
     <script src="../../dist/js/signup/signup.js"></script>
