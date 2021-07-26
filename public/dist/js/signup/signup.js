@@ -79,6 +79,6 @@ submitBtn.addEventListener('click', () => {
     checkPassword(passwordInput.value) &&
     checkPasswordCheck(passwordCheckInput.value)
   ) {
-    signup(emailInput.value, passwordInput.value);
+    signup(nameInput.value, emailInput.value, passwordInput.value);
   }
 });

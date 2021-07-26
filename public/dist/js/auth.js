@@ -1,6 +1,5 @@
 const signinGNB = document.getElementById('signin');
 const signupGNB = document.getElementById('signup');
-
 const firebaseConfig = {};
 
 firebase.initializeApp(firebaseConfig);
@@ -39,6 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+function writeUserData(email, name, uid) {
+  firebase
+    .database()
+    .ref('Users/' + uid)
+    .set({
+      email: email,
+      name: name,
+      uid: uid,
+    });
+}
+
 function googleLogin() {
   let provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/plus.login');
@@ -63,17 +73,18 @@ function googleLogin() {
     });
 }
 
-function signup(email, password) {
+function signup(name, email, password) {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      var user = userCredential.user;
+      const user = userCredential.user;
+      writeUserData(email, name, user.uid);
       alert('회원가입이 완료되었습니다.');
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      const errorCode = error.code;
+      const errorMessage = error.message;
       if (errorCode === 'auth/email-already-in-use') {
         alert('이미 등록된 이메일입니다. 로그인 페이지로 이동합니다.');
         window.location.href = '../signin/';
@@ -86,12 +97,12 @@ function signin(email, password) {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      var user = userCredential.user;
+      const user = userCredential.user;
       console.log('로그인 성공');
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      const errorCode = error.code;
+      const errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
     });
