@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Will</title>
+    <link rel="stylesheet" href="../../dist/css/basic.css">
+    <link rel="stylesheet" href="../../dist/css/healing.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="write" style="width:320px">
+            <div class="logo"><a href="/">You Will</a></div>
+            <ul>
+                <li><a href="../will/">유서</a></li>
+                <li><a href="../letter/">편지</a></li>
+                <li><a href="../healing/">힐링</a></li>
+            </ul>
+        </div>
+        <div class="btn" style="width: 170px;">
+            <button class="signin" id="signin"></button>
+            <button class="signup" id="signup"></button>
+        </div>
+    </header>
+    <div class="container" id="container">
+        <div class="category-intro">
+            <h3 class="category-name">힐링</h3>
+            <i class="fas fa-pencil-alt fa-3x icon-pencil" id="pencil-btn"></i>
+        </div>
+    </div>
+    <footer>
+        <div class="logo">You Will</div>
+        <ul>
+            <li>유서</li>
+            <li>편지</li>
+            <li>힐링</li>
+        </ul>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../../dist/js/auth.js"></script>
+    <script src="../../dist/js/healing/healing_check.js"></script>
+</body>
+</html>

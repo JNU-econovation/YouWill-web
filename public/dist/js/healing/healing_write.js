@@ -32,7 +32,7 @@ completeBtn.addEventListener('click', function () {
   firebase.auth().onAuthStateChanged(function (user) {
     const newHealingRef = dbRef.push();
     const uid = user.uid;
-    newHealingRef.set({
+    const postInfo = {
       content: content,
       date: getCurrentDate(),
       id: newHealingRef.key,
@@ -42,8 +42,10 @@ completeBtn.addEventListener('click', function () {
       likesCount: 0,
       title: healingTitle.value,
       uid: uid,
-    });
-    console.log('데이터 넣기 성공');
+    };
+    newHealingRef.set(postInfo);
+
+    localStorage.setItem('wrote', JSON.stringify(postInfo));
+    window.location.href = 'healing_check.html';
   });
-  window.location.href = 'healing_detail.html';
 });

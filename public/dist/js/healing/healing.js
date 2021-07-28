@@ -55,6 +55,6 @@ function setLayout(healingPreview, dbRef) {
 }
 
 window.addEventListener('load', () => {
-  setLayout(healingTop, dbRef.orderByChild('date'));
-  setLayout(healingRecent, dbRef.orderByChild('likesCount'));
+  setLayout(healingTop, dbRef.orderByChild('likesCount'));
+  setLayout(healingRecent, dbRef.orderByChild('date'));
 });
