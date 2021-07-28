@@ -40,19 +40,19 @@
             <div>
                 <label>이메일</label>
                 <div class="input-row">
-                    <input type="email" class="input" id="email" placeholder="example@example.com">
+                    <input type="email" class="input" id="email" placeholder="example@example.com" autocomplete="username">
                 </div>
                 <p class="error-msg" id="email-error"></p>
             </div>
             <div>
                 <label>비밀번호</label>
-                <input type="password" lang="en" class="input" id="password" placeholder="********">
+                <input type="password" lang="en" class="input" id="password" placeholder="********" autocomplete="new-password">
                 <small class="warning-msg"><i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;영문 대문자/소문자, 숫자, 특수문자 중 2가지 이상 조합, 8~20자</small>
                 <p class="error-msg" id="password-error"></p>
             </div>
             <div>
                 <label>비밀번호 확인</label>
-                <input type="password" lang="en" class="input" id="password-check" placeholder="********">
+                <input type="password" lang="en" class="input" id="password-check" placeholder="********" autocomplete="new-password">
                 <p class="error-msg" id="password-check-error"></p>
             </div>
         </form>
@@ -60,11 +60,11 @@
             <button type="submit" class="signup-btn" id="signup-btn">가입하기</button>
         </div>
     </div>
-    <script src="../../dist/js/signup/signup.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+    <script src="../../dist/js/signup/signup.js"></script>
 </body>
 </html>
