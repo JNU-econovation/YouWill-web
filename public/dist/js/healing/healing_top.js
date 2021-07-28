@@ -1,5 +1,18 @@
 const healingTop = document.getElementById('healing-list');
+const pencilBtn = document.getElementById('pencil-btn');
 const dbRef = firebase.database().ref('Healing').orderByChild('likesCount');
+
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    pencilBtn.setAttribute('onclick', "location.href='healing_write.html'");
+  } else {
+    pencilBtn.setAttribute('onclick', '');
+    pencilBtn.addEventListener('click', function () {
+      alert('로그인 후 글을 작성할 수 있습니다.');
+      window.location.href = '../signin/';
+    });
+  }
+});
 
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
