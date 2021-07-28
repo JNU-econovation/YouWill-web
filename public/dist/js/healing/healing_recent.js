@@ -14,13 +14,23 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+function textLengthOverCut(txt, maxLen) {
+  if (txt.length > maxLen) {
+    txt = txt.substr(0, maxLen) + '...';
+  }
+  return txt;
+}
+
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
     snapshot.forEach((topSnap) => {
       const post = topSnap.val();
       const healingItem = document.createElement('div');
-      healingItem.innerHTML = `<h4 class="item-title">${post.title}</h4>
-          <p class="item-content">${post.content}</p>
+      healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
+        post.title,
+        20
+      )}</h4>
+          <p class="item-content">${textLengthOverCut(post.content, 30)}</p>
           <div class="item-detail">
             <p class="item-time">${post.date}</p>
             <div class="item-like">

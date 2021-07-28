@@ -16,6 +16,14 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+function textLengthOverCut(txt) {
+  const maxLen = 20;
+  if (txt.length > maxLen) {
+    txt = txt.substr(0, maxLen) + '...';
+  }
+  return txt;
+}
+
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
     let countView = 0;
@@ -23,8 +31,11 @@ function setLayout(healingPreview, dbRef) {
       if (countView === previewCount) return;
       const post = topSnap.val();
       const healingItem = document.createElement('div');
-      healingItem.innerHTML = `<h4 class="item-title">${post.title}</h4>
-          <p class="item-content">${post.content}</p>
+      healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
+        post.title,
+        20
+      )}</h4>
+          <p class="item-content">${textLengthOverCut(post.content, 30)}</p>
           <div class="item-detail">
             <p class="item-time">${post.date}</p>
             <div class="item-like">
@@ -38,6 +49,7 @@ function setLayout(healingPreview, dbRef) {
         "location.href='healing_detail.html'"
       );
       healingPreview.insertBefore(healingItem, healingPreview.firstChild);
+      countView++;
     });
   });
 }
