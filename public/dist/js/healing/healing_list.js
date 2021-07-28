@@ -1,36 +1,34 @@
-(() => {
-  const healingList = document.getElementById('healing-list');
-  const previewCount = 30;
-  const postInfo = [
-    // 임시 배열, 인기 글(추천 많은 순으로)
-    {
-      title:
-        '오늘 학교 후문에서 짐 쏟았을 때 도와주신 분들께 정말 감사했습니다!',
-      content:
-        '짐이 엄청 많았는데 급하게 지나가시던 두 분께서 호다닥 주워주셔서 덕분에 짐 챙겼어요ㅠㅠ',
-      time: '05.01 17:56',
-      likes: 0,
-    },
-  ];
+const healingTop = document.getElementById('healing-top');
+const dbRef = firebase.database().ref('Healing/');
 
-  function setLayout(healingPreview, postInfo) {
-    for (let i = 0; i < previewCount; i++) {
+function setLayout(healingPreview, dbRef) {
+  dbRef.on('value', (snapshot) => {
+    const data = snapshot.val();
+    const uids = Object.getOwnPropertyNames(snapshot.val());
+    for (let i = 0; i < uids.length; i++) {
       const healingItem = document.createElement('div');
-      const itemTitle = `<h4 class="item-title">${postInfo[0].title}</h4>`;
-      const itemContent = `<p class="item-content">${postInfo[0].content}</p>`;
+      const itemTitle = `<h4 class="item-title">${data[uids[i]].title}</h4>`;
+      const itemContent = `<p class="item-content">${
+        data[uids[i]].content
+      }</p>`;
       const itemDetail = `<div class="item-detail">
-                            <p class="item-time">${postInfo[0].time}</p>
+                            <p class="item-time">${data[uids[i]].date}</p>
                             <div class="item-like">
                                 <i class="fas fa-thumbs-up icon-thumbs"></i>
-                                <p>${postInfo[0].likes}</p>
+                                <p>${data[uids[i]].likesCount}</p>
                             </div>
                         </div>`;
       healingItem.innerHTML = itemTitle + itemContent + itemDetail;
       healingItem.setAttribute('class', 'healing-item');
+      healingItem.setAttribute(
+        'onClick',
+        "location.href='healing_detail.html'"
+      );
       healingPreview.appendChild(healingItem);
     }
-  }
-  window.addEventListener('load', () => {
-    setLayout(healingList, postInfo);
   });
-})();
+}
+
+window.addEventListener('load', () => {
+  setLayout(healingTop, dbRef);
+});
