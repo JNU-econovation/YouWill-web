@@ -2,7 +2,6 @@ const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const passwordCheckInput = document.getElementById('password-check');
-const checkBtn = document.getElementById('check-btn');
 const submitBtn = document.getElementById('signup-btn');
 const nameMsg = document.getElementById('name-error');
 const emailMsg = document.getElementById('email-error');
@@ -79,6 +78,6 @@ submitBtn.addEventListener('click', () => {
     checkPassword(passwordInput.value) &&
     checkPasswordCheck(passwordCheckInput.value)
   ) {
-    signup(emailInput.value, passwordInput.value);
+    signup(nameInput.value, emailInput.value, passwordInput.value);
   }
 });

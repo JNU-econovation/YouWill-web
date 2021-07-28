@@ -1,10 +1,13 @@
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password-input');
+const emailInput = document.getElementById('signin-email');
+const passwordInput = document.getElementById('signin-password');
 const signInBtn = document.getElementById('signin-btn');
 const emailMsg = document.getElementById('email-error');
 const passwordMsg = document.getElementById('password-error');
 
 const checkEmailInput = (email) => {
+  const regExp =
+    /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
   if (!email) {
     emailMsg.textContent = '이메일 주소를 입력해 주세요.';
     return false;
