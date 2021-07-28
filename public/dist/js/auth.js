@@ -103,8 +103,11 @@ function signin(email, password) {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
+      if (errorCode === 'auth/auth/wrong-password') {
+        alert('비밀번호가 틀렸습니다.');
+      } else if (errorCode === 'auth/user-not-found') {
+        alert('등록되지 않은 이메일입니다.');
+      }
     });
 }
 
