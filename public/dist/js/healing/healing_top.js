@@ -1,13 +1,9 @@
-const healingTop = document.getElementById('healing-top');
-const healingRecent = document.getElementById('healing-recent');
-const dbRef = firebase.database().ref('Healing');
-const previewCount = 6;
+const healingTop = document.getElementById('healing-list');
+const dbRef = firebase.database().ref('Healing').orderByChild('likesCount');
 
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
-    let countView = 0;
     snapshot.forEach((topSnap) => {
-      if (countView === previewCount) return;
       const post = topSnap.val();
       const healingItem = document.createElement('div');
       healingItem.innerHTML = `<h4 class="item-title">${post.title}</h4>
@@ -30,6 +26,5 @@ function setLayout(healingPreview, dbRef) {
 }
 
 window.addEventListener('load', () => {
-  setLayout(healingTop, dbRef.orderByChild('date'));
-  setLayout(healingRecent, dbRef.orderByChild('likesCount'));
+  setLayout(healingTop, dbRef);
 });
