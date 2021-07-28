@@ -252,3 +252,36 @@ html {
   border-collapse: collapse;
   height: 20px;
 }
+
+/*메시지 박스*/
+.toast {
+  display: none;
+  border: 0.2px solid black;
+  background-color: var(--BG2);
+  width: 45vw;
+  height: 45vh;
+  z-index: 100;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.toast.show {
+  display: block;
+}
+
+.toast p {
+  text-align: left;
+  line-height: 2.5rem;
+  margin: 1.5rem;
+}
+.toast .gray {
+  text-align: center;
+  color: gray;
+}
+.toast .close {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+}

@@ -1,3 +1,7 @@
+
+
+
+/////////////////////////////////////
 const triggerMargin = 150;
 const potos = document.querySelectorAll('.part');
 const bottom = document.querySelector('.bottom');
@@ -19,15 +23,8 @@ const setLayout = function () {
     }
   }
 };
-// const setLayoutBottom= function(){
-//     if(!bottom.classList.contains('show')){
-//         if(window.innerHeight > bottom.getBoundingClientRect().top){
-//             bottom.classList.add('show');
-//         }
-
-//     }
-// }
 
 window.addEventListener('load', setLayout);
-
 window.addEventListener('scroll', setLayout);
+
+

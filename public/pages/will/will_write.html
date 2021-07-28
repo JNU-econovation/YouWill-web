@@ -32,7 +32,7 @@
             <h3 class="category-name">유서</h3>
             <i class="fas fa-pencil-alt fa-3x icon-pencil"></i>
         </div>
-		<div class="centered">
+		<div class="centered" id="centered">
 			<div class="row row-editor">
 				<div class="editor-container">
 					<div class="editor"></div>
@@ -41,9 +41,29 @@
 		</div>
 		<div class="button-row">
             <button class="grey-button" onclick="'../mypage/'">저장</button>
-            <button class="yellow-button" onclick="location.href='will_detail.html'">작성 완료</button>
+            <button class="yellow-button">작성 완료</button>
         </div>
 	</main>
+	
+	<!--toast message-->
+	<div class="toast">
+		<div class="msg">
+			<p class="black">
+				지금 삶이 힘든 당신, 이 세상에 태어난 이상 당신은 모든 걸 매일 누릴 자격이 있어요.<br>
+				대단하지 않은 하루가 지나고, 또 별 것 아닌 하루가 온다 해도 인생은 살 가치가 있습니다.<br>
+				후회 가득한 과거와 불안하기만 한 미래 때문에 지금을 망치지 마세요.<br>
+				오늘을 살아가세요. 눈이 부시게.
+			</p>
+			<p class="gray">
+				드라마 <눈이 부시게>
+			</p>
+		</div>
+		<button class="close">
+			닫기
+		</button>
+	</div>
+
+	<!--footer-->
 	<footer>
         <div class="first">
             <div class="logo">You Will</div>
@@ -55,6 +75,7 @@
         </div>
         <div class="dum"></div>
     </footer>
+	
 	<script src="../../editor/build/ckeditor.js"></script>
 	<script>ClassicEditor.create( document.querySelector( '.editor' ), {
 			toolbar: {
@@ -109,5 +130,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+	<script src="/public/dist/js/will/will_detail.js"></script>
 </body>
 </html>
