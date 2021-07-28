@@ -1,20 +1,23 @@
 const signinGNB = document.getElementById('signin');
 const signupGNB = document.getElementById('signup');
+
+//firebase 인증
+const firebaseConfig = {
+ 
+};
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+////////////////////////////////////////////////////////
 const mypageName=document.getElementById('userName');
 const auth=firebase.auth();
 const willRef=firebase.database().ref('Will/');
 let userInfo;
-
-
-//firebase 인증
-const firebaseConfig = {};
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
 //유서 페이지 key값 확인
 willRef.on('child_added', function(data){
 	console.log(data.val(), 'key: ', data.key)
 })
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
