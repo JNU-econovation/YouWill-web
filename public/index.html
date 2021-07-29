@@ -12,7 +12,11 @@
 <body>
     <header>
         <div class="write" style="width:320px">
-            <div class="logo"><a href="/">You Will</a></div>
+            <div class="logo" id="logo-icon">
+                <img src="dist/img/kangaroo_y.png"/>
+                <a href="/">You Will</a>
+                <img src="dist/img/kangaroo_w.png"/>
+            </div>
             <ul>
                 <li><a href="pages/will/">유서</a></li>
                 <li><a href="pages/letter/">편지</a></li>
@@ -27,8 +31,6 @@
     <section class="main">
         <img src="dist/img/메인_대문.png" alt="나와 모두에게 쓰는 편지" style="max-width: 100%; height: auto;">
     </section>
-
-    <!--category-->
     <section class="category">
         <ul class="will">
             <li id="img"><a href="pages/will/index.html"><img src="dist/img/메인_유서(원).png" alt="" width="200" height="200"></a></li>
@@ -36,7 +38,6 @@
                 <li id="bold">유서</li>
                 <li id="explain">몇 시간 또는 며칠 후에 세상을 떠나게 된다면<br>어떤 이야기를 남기고 싶으신가요?</li>
             </div>
-            
         </ul>
         <ul class="letter">
             <li id="img"><a href="pages/letter/index.html"><img src="dist/img/메인_편지(원).png" alt="" width="200" height="200"></a></li>
@@ -44,7 +45,6 @@
                 <li id="bold">편지</li> 
             <li id="explain">미래의 나 또는 지인에게<br>하고 싶은 이야기를 담아 편지를 보내세요.</li>
             </div>
-            
         </ul>
         <ul class="heeling">
             <li id="img"><a href="pages/healing/index.html"><img src="dist/img/메인_힐링(원).png" alt="" width="200" height="200"></a></li>
@@ -63,7 +63,6 @@
                 <li>힐링</li>
             </ul>
         </div>
-        
         <div class="dum"></div>
     </footer>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
@@ -71,8 +70,5 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="dist/js/auth.js"></script>
-    
-
-
 </body>
 </html>

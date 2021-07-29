@@ -202,16 +202,24 @@ header .write {
   /* margin: auto; */
   color: var(--font3);
 }
-header .write .logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  padding: 0.5rem;
-  padding-bottom: 0.2rem;
+header .write .logo a{
+  font-size: 1.5rem;
+  font-weight: 700;
   border-bottom: 0.3rem solid var(--main2);
+}
+.logo img{
+    height: 2.0rem;
+    width: auto;
+}
+#logo-icon {
+  display: flex;
+  column-gap: 5px;
+  flex-direction: row;
 }
 header ul {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 header ul li {
   padding: 0.5rem;
