@@ -1,4 +1,4 @@
-//////////////////////////////////
+
 const toast=document.querySelector('.toast');
 const endBtn=document.querySelector('.yellow-button');
 const centered=document.getElementById('centered');

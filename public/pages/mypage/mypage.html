@@ -31,8 +31,11 @@
         <!--sideVar-->
         <section class="sideVar">
             <strong class="userName" id="userName">김이름</strong>
+
+            <!--write_tabs-->
             <ul class="write_tabs">
                 <strong>작성한 글</strong>
+
                 <li class="tab active" data-tabNum="0">
                     <a href="#">유서</a>
                 </li>
@@ -43,10 +46,18 @@
                     <a href="#">힐링글</a>
                 </li>
             </ul>
-            <ul class="userInfo">
+
+            <!--letter_tabs-->
+            <a href="#" class="tab" data-tabNum="3">
+                <strong>편지함</strong>
+            </a>
+
+            <!--userInfo_tabs-->
+            <ul class="userInfo_tabs">
                 <strong>내 정보</strong>
-                <li><button>비밀번호 변경</button></li>
-                <li><button>계정 탈퇴</button></li>
+                
+                <li class="tab" data-tabNum="4"><button>비밀번호 변경</button></li>
+                <li class="tab" data-tabNum="5"><button>계정 탈퇴</button></li>
             </ul>
         </section>
 
@@ -55,11 +66,11 @@
             <section class="cont" id="tab1">
                 <strong>작성한 유서</strong>
                 <a href="#">
-                    <span class="title">소중한 사람들에게 보내는 마지막 편지네요. ...</span>
+                    <span class="title" id="title1">유서1 ...</span>
                     <span class="date">2021.05.01</span>
                 </a>
                 <a href="#">
-                    <span class="title">이렇게 짧지도 길지도 않은 내 삶이 끝나는구나. ...</span>
+                    <span class="title">유서2 ...</span>
                     <span class="date">2023.02.27</span>
                 </a>
                 
@@ -67,24 +78,42 @@
             <section class="cont" id="tab2">
                 <strong>작성한 편지</strong>
                 <a href="#">
-                    <span class="title">소중한 사람들에게 보내는 마지막 편지네요. ...</span>
+                    <span class="title">편지1. ...</span>
                     <span class="date">2021.05.01</span>
                 </a>
                 <a href="#">
-                    <span class="title">이렇게 짧지도 길지도 않은 내 삶이 끝나는구나. ...</span>
+                    <span class="title">편지2 ...</span>
                     <span class="date">2023.02.27</span>
                 </a>
             </section>
             <section class="cont" id="tab3">
                 <strong>작성한 힐링글</strong>
                 <a href="#">
-                    <span class="title">소중한 사람들에게 보내는 마지막 편지네요. ...</span>
+                    <span class="title">힐링글1 ... ...</span>
                     <span class="date">2021.05.01</span>
                 </a>
                 <a href="#">
-                    <span class="title">이렇게 짧지도 길지도 않은 내 삶이 끝나는구나. ...</span>
+                    <span class="title">힐링글2 ...</span>
                     <span class="date">2023.02.27</span>
                 </a>
+            </section>
+            <section class="cont" id="tab4">
+                <a href="#">
+                    <span class="title">편지1. ...</span>
+                    <span class="sender">보낸이 이메일</span>
+                    <span class="date">2021.05.01</span>
+
+                </a>
+            </section>
+            <section class="cont" id="tab5">
+                <span>
+                    비밀번호 변경
+                </span>
+            </section>
+            <section class="cont" id="tab6">
+                <span>
+                    계정 탈퇴
+                </span>
             </section>
         </section>
     </div>
@@ -94,5 +123,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+    <script src="../../dist/js/mypage/mypage_check.js"></script>
 </body>
 </html>
