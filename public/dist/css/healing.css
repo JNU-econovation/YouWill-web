@@ -84,7 +84,7 @@
     justify-content: space-between;
 }
 
-.item-time {
+.item-date {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0;
     color: #A1A1A1;
@@ -94,9 +94,11 @@
     display: flex; 
     color: #A1A1A1;
 }
-
-.item-like > p {
-    margin-left: 5px;
+.item-like i {
+    cursor: pointer;
+}
+.item-like p {
+    margin-left: 2px;
 }
 
 .post-table {
@@ -136,6 +138,11 @@
     border: none;
     border-bottom: 0.5px solid #A1A1A1;
     border-radius: 3px;
+}
+
+#edit-delete-btn {
+    display: inline-flex;
+    font-size: 0.9rem;
 }
 
 .button-row {
