@@ -37,7 +37,6 @@
   color: #acc69f;
 }
 
-
 .question {
   font-weight: 600;
 }
@@ -76,7 +75,7 @@
 }
 
 #toMe {
-  background-color: var(--main2); 
+  background-color: #C7D4C0;
   margin-right: 2rem;
   font-weight: 500;
 }
@@ -128,10 +127,6 @@ input {
   box-shadow: 0 1px 5px 0 #dbdbdb;
   cursor: pointer;
 }
-.letter_pad .pad-list .item:hover {
-  border: 3px solid #ACC69F;
-  border-radius: 5px;
-}
 
 .saveAndWrite {
   width: 50vw;
@@ -166,10 +161,10 @@ input {
   height: 80vh;
   margin: 0 auto;
   margin-top: 5rem;
+  row-gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 .main_last .mailbox {
   width: 50em;
@@ -197,23 +192,19 @@ input {
 }
 
 .main_last .msg {
+  font-weight: 600;
   text-align: center;
   font-size: 1.3em;
   color: var(--main1);
 }
-.main_last .buttons {
-  display: flex;
-  width: 30%;
-  justify-content: space-between;
-}
+
 .main_last button {
+  font-size: 1rem;
   display: inline;
   position: relative;
-
   border: none;
   border-radius: 4px;
-  background-color: var(--main4);
-
+  background-color: #F1F1F5;
   height: 3rem;
   padding: 0.5rem 2rem;
   cursor: pointer;
@@ -293,7 +284,7 @@ input {
 .green-button,
 .yellow-button {
   border-radius: 3px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   box-shadow: 0 1px 5px 0 #dbdbdb;
   cursor: pointer;
   font-size: 1em;

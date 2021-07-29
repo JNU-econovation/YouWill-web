@@ -42,20 +42,20 @@
         </div>
         <div class="info">
             <div class="question">받는 사람의 이메일 주소를 입력해주세요.</div>
-            <input type='email' name='userEmail' placeholder="example@example.com">
+            <input id="email-input" type='email' name='userEmail' placeholder="example@example.com">
         </div>
         <div class="letter_pad">
             <div class="msg question">마음에 드는 편지지를 골라주세요.</div>
             <div class="pad-list">
-                <img class="item" src="../../dist/img/letter_paper_1.png"/>
-                <img class="item" src="../../dist/img/letter_paper_2.png"/>
-                <img class="item" src="../../dist/img/letter_paper_3.png"/>
+                <img class="item" id="pad-0" src="../../dist/img/letter_paper_1.png"/>
+                <img class="item" id="pad-1" src="../../dist/img/letter_paper_2.png"/>
+                <img class="item" id="pad-2" src="../../dist/img/letter_paper_3.png"/>
             </div>
         </div>
     </section>
     <section class="saveAndWrite">
         <button class="save" onclick="location.href='../mypage/mypage.html'">저장</button>
-        <button class="goToWrite" onclick="location.href='letter_write.html'">편지 작성하러 가기</button>
+        <button type="button" class="goToWrite" id="write-btn">편지 작성하기</button>
     </section>
     <footer>
         <div class="first">
@@ -68,11 +68,11 @@
         </div>
         <div class="dum"></div>
     </footer>
-    <script src="../../dist/js/letter/letter.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+    <script src="../../dist/js/letter/letter.js"></script>
 </body>
 </html>
