@@ -12,19 +12,14 @@
   --font2: #dbdbdb;
   --font3: #191919;
 }
-html {
-  font-size: 14px;
-}
-/*logo*/
+
 .logo_letter {
   width: 100%;
   height: 20rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 10rem;
 }
 .logo_letter h1 {
@@ -42,24 +37,22 @@ html {
   color: #acc69f;
 }
 
-/****main****/
+
+.question {
+  font-weight: 600;
+}
 .main {
   width: 100%;
-  height: 120rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 15rem;
+  row-gap: 15rem;
 }
-
-/*main .who*/
 .main .who {
   width: 100%;
   height: 5.5rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,114 +69,75 @@ html {
   border: none;
   border-radius: 4px;
   width: 10vw;
+  font-size: 0.9rem;
   height: 3rem;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
+
 #toMe {
-  background-color: var(--main2);
+  background-color: var(--main2); 
   margin-right: 2rem;
+  font-weight: 500;
 }
 #toOther {
   background-color: var(--main4);
+  font-weight: 500;
 }
 
-/*main.info*/
 .main .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   width: fit-content;
   height: 4.5rem;
 }
 
 .main .info form,
 input {
+  height: 30px;
   width: 100%;
   border: none;
   border-bottom: 0.2px solid var(--main3);
+  text-align: center;
+  font-size: 1rem;
 }
 
 .main .info input:focus {
   outline: none;
 }
 
-/*main.when*/
-.main .when {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 100%;
-  height: 4.5rem;
-}
-.main .when .date {
-  width: fit-content;
-  min-width: 160px;
-}
-/* .main .datepicker {
-  display: flex;
-  width: 20vw;
-  justify-content: center;
-  cursor: pointer;
-}
-.main .datepicker input {
-  text-align: center;
-  padding-bottom: 0.5em;
-  margin-right: 2em;
-  width: 10em;
-  border: none;
-  border-bottom: 0.2px solid var(--main3);
-}
-
-.main .datepicker input:focus {
-  outline: none;
-} */
-
-/*jQuery 사용 x일경우*/
-.main .when form {
-  /* display: flex; */
-  width: 15vw;
-  justify-content: center;
-}
-
-/***letter_pad****/
 .letter_pad {
-  width: 50%;
+  width: 60%;
   height: 45%;
 }
 .letter_pad .msg {
   text-align: center;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 .letter_pad .pad-list {
-  width: 100%;
-  height: 90%;
-
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
   grid-template-columns: 1fr 1fr 1fr;
-
-  row-gap: 30px;
-  column-gap: 30px;
-
+  column-gap: 2rem;
   align-content: center;
   justify-content: center;
 }
 
 .letter_pad .pad-list .item {
-  border: 1px solid black;
+  box-shadow: 0 1px 5px 0 #dbdbdb;
+  cursor: pointer;
 }
-/*saveAndWrite*/
+.letter_pad .pad-list .item:hover {
+  border: 3px solid #ACC69F;
+  border-radius: 5px;
+}
+
 .saveAndWrite {
   width: 50vw;
   height: fit-content;
   margin: auto;
   margin-bottom: 10rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,10 +146,11 @@ input {
 .saveAndWrite button {
   border: none;
   border-radius: 4px;
-
   height: 3rem;
-  padding: 0.5rem 2rem;
-  cursor: pointer;
+  width: 8rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .saveAndWrite .save {
@@ -205,8 +160,6 @@ input {
 .saveAndWrite .goToWrite {
   background-color: var(--main4);
 }
-
-/*main_last*/
 
 .main_last {
   width: 50%;
@@ -228,12 +181,12 @@ input {
   height: 80%;
   margin: 0 auto;
   margin-top: 3em;
-
   animation-name: mailBox;
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
+
 @keyframes mailBox {
   from {
     transform: rotate(-5deg);
@@ -242,6 +195,7 @@ input {
     transform: rotate(5deg);
   }
 }
+
 .main_last .msg {
   text-align: center;
   font-size: 1.3em;
@@ -360,4 +314,13 @@ input {
 
 .yellow-button {
   background-color: #f8f3cc;
+}
+
+
+/* 1255 */
+@media (max-width: 945px) {
+  .letter_pad .pad-list {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
 }

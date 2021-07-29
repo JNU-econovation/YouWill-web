@@ -9,27 +9,10 @@
     <link rel="stylesheet" href="../../dist/css/letter.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        // TODO: jQuery -> JS
-         $(function() {
-                $( "#datepicker" ).datepicker({
-                    showOn: "both",
-                    // buttonImage: "images/calendar.gif",
-                    buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
-                    buttonImageOnly: true,
-                    // buttonText: "Select date",
-                    changeYear:true,
-                    minDate:0,
-                    dateFormat:"yy. mm . dd"
-                });
-            });
-    </script>
 </head>
 <body>
-    <!--header-->
     <header>
         <div class="write" style="width:320px">
             <div class="logo"><a href="/">You Will</a></div>
@@ -45,54 +28,35 @@
         </div>
     </header>
     </header>
-    <!--logo_letter-->
     <section class="logo_letter">
         <h1>편지</h1>
         <button><i class="fas fa-pencil-alt fa-3x icon-pencil"></i></button>       
     </section>
-    <!--main-->
     <section class="main">
         <div class="who">
-            <div>누구에게 보내는 편지인가요?</div>
+            <div class="question">누구에게 보내는 편지인가요?</div>
             <div class="btns">
                 <button id="toMe">나에게</button>
                 <button id="toOther">다른 사람에게</button>
             </div>
         </div>
         <div class="info">
-            <div>받는 사람의 휴대폰 번호나 이메일 주소를 입력해주세요.</div>
-            <form name="userInfo" action="" method="" autocomplete="on">
-                <input class="phoneOrEmail" type='email' name='userEmail'>
-            </form>
-        </div>
-        <div class="when">
-            <div>언제 도착하는 편지인가요?</div>
-            <form action="" class="date">
-                <select name="" id="cmbYear" onchange="m_change()"></select>
-                <select name="" id="cmbMonth" onchange="m_change()"></select>
-                <select name="" id="cmbDay"></select>
-            </form>
-           
+            <div class="question">받는 사람의 이메일 주소를 입력해주세요.</div>
+            <input type='email' name='userEmail' placeholder="example@example.com">
         </div>
         <div class="letter_pad">
-            <div class="msg">마음에 드는 편지지를 골라주세요.</div>
+            <div class="msg question">마음에 드는 편지지를 골라주세요.</div>
             <div class="pad-list">
-                <!-- TODO: 동적 생성(JS) -->
-                <div class="item">A</div>
-                <div class="item">B</div>
-                <div class="item">C</div>
-                <div class="item">D</div>
-                <div class="item">E</div>
-                <div class="item">F</div>
+                <img class="item" src="../../dist/img/letter_paper_1.png"/>
+                <img class="item" src="../../dist/img/letter_paper_2.png"/>
+                <img class="item" src="../../dist/img/letter_paper_3.png"/>
             </div>
         </div>
     </section>
-    <!--saveAndWrite-->
     <section class="saveAndWrite">
         <button class="save" onclick="location.href='../mypage/mypage.html'">저장</button>
         <button class="goToWrite" onclick="location.href='letter_write.html'">편지 작성하러 가기</button>
     </section>
-    <!--footer-->
     <footer>
         <div class="first">
             <div class="logo">You Will</div>
