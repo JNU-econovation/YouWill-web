@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You Will</title>
     <link rel="stylesheet" href="../../dist/css/basic.css">
-    <link rel="stylesheet" href="../../dist/css/will.css">
+    <link rel="stylesheet" href="../../dist/css/healing.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -26,24 +26,14 @@
             <button class="signup" id="signup"></button>
         </div>
     </header>
-    <div class="container">
+    <div class="container" id="container">
         <div class="category-intro">
             <h3 class="category-name">유서</h3>
-            <a href="will_write.html"><i class="fas fa-pencil-alt fa-3x icon-pencil"></i></a>
+            <i class="fas fa-pencil-alt fa-3x icon-pencil" id="pencil-btn"></i>
         </div>
-        <table class="post-table">
-            <tr class="post-title-date">
-                <td align="right"><p class="item-time">05.01 17:56</p></td>
-            </tr>
-            <tr class="post-content">
-                <td colspan='2'>유서 내용</td>
-                <td></td>
-            </tr>
-            <tr colspan='2' class="last-row"></tr>
-        </table>
-        <div class="button-row">
+        <div class="button-row" id="button-row">
             <button class="grey-button" onclick="history.go(-1)">뒤로 가기</button>
-            <button class="green-button" onclick="'../mypage/'">마이페이지</button>
+            <button class="green-button" onclick="location.href='../mypage/mypage.html'">마이페이지</button>
         </div>
     </div>
     <footer>
@@ -54,11 +44,11 @@
             <li>힐링</li>
         </ul>
     </footer>
-    <script src="../../dist/js/healing/healing_detail.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+    <script src="../../dist/js/will/will_check.js"></script>
 </body>
 </html>
