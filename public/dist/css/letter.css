@@ -164,6 +164,7 @@ input {
   row-gap: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .main_last .mailbox {
@@ -236,11 +237,6 @@ input {
   width: 60%;
 }
 
-.post-title-date {
-  border-bottom: 1.8px solid #dbdbdb;
-  border-collapse: collapse;
-}
-
 .post-title-date td {
   padding-bottom: 10px;
 }
@@ -252,6 +248,10 @@ input {
 
 .post-content td {
   padding-top: 40px;
+}
+
+#content {
+  background-size: 100%;
 }
 
 .post-like {

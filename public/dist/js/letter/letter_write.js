@@ -25,6 +25,7 @@ completeBtn.addEventListener('click', function () {
       const db = firebase.database();
       const uid = user.uid;
       const newLetterRef = db.ref('Letter').push();
+      const newLetterBoxRef = db.ref('LetterBox').push();
       const postInfo = {
         content: content,
         paper_type: letterOption.paper_type,
@@ -33,9 +34,13 @@ completeBtn.addEventListener('click', function () {
         write_date: getCurrentDate(),
       };
       newLetterRef.set(uid);
+      newLetterBoxRef.set(uid);
       db.ref(`Letter/${newLetterRef.key}/` + uid).set(postInfo);
+      db.ref(`LetterBox/${newLetterBoxRef.key}/` + uid).set(postInfo);
       localStorage.setItem('wrote', JSON.stringify(postInfo));
-      window.location.href = 'letter_check.html';
+      setTimeout(function () {
+        window.location.href = 'letter_check.html';
+      }, 3000);
     });
   }
 });

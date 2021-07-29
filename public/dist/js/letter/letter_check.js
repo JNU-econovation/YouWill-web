@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-const buttons = document.getElementById('button-row');
+const button = document.getElementById('button');
 let wrote = JSON.parse(localStorage.getItem('wrote'));
 
 history.pushState(null, null, location.href);
@@ -22,10 +22,11 @@ function setLayout(postInfo) {
       )}</p></td>
     </tr>
     <tr class="post-content">
-      <td colspan='2'>${postInfo.content}</td>
+      <td id="content" background="../../dist/img/letter_paper_${
+        postInfo.paper_type
+      }.png" colspan='2'>${postInfo.content}</td>
       <td></td>
     </tr>
-    <tr colspan='2' class="last-row"></tr>
     <tr colspan='2'>
       <td></td>
       <td align='right'>
@@ -37,7 +38,7 @@ function setLayout(postInfo) {
     </tr>
   `;
     postItem.setAttribute('class', 'post-table');
-    container.insertBefore(postItem, buttons);
+    container.insertBefore(postItem, button);
   } else {
     window.location.href = '../mypage/mypage.html';
   }
