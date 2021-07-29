@@ -1,4 +1,5 @@
 const healingContainer = document.getElementById('container');
+const buttons = document.getElementById('button-row');
 const pencilBtn = document.getElementById('pencil-btn');
 let wrote = JSON.parse(localStorage.getItem('wrote'));
 
@@ -23,6 +24,21 @@ function like(uid) {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user && user.uid === uid) {
       alert('자신이 작성한 글은 추천할 수 없습니다.');
+    }
+  });
+}
+
+function deletePost() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user && user.uid === wrote.uid) {
+      firebase
+        .database()
+        .ref('Healing/' + wrote.id)
+        .remove();
+      alert('해당 글이 삭제되었습니다.');
+      window.location.href = '../healing/';
+    } else {
+      alert('잘못된 접근입니다.');
     }
   });
 }
@@ -52,9 +68,18 @@ function setLayout(postInfo) {
       <td></td>
     </tr>
     <tr colspan='2' class="last-row"></tr>
+    <tr colspan='2'>
+      <td></td>
+      <td align='right'>
+        <div id="edit-delete-btn">
+          <button type="button" id="edit-btn">수정</button>
+          <button type="button" id="delete-btn" onclick="deletePost()">삭제</button>
+        </div>
+      </td>
+    </tr>
   `;
     postItem.setAttribute('class', 'post-table');
-    healingContainer.appendChild(postItem);
+    healingContainer.insertBefore(postItem, buttons);
   } else {
     window.location.href = '../mypage/mypage.html';
   }
