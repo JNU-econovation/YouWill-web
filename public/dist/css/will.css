@@ -12,20 +12,15 @@
   --font2: #dbdbdb;
   --font3: #191919;
 }
-html {
-  /* font-size: 16px; */
-}
 
 /*logo*/
 .logo_will {
   width: 100%;
   height: 20rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 10rem;
 }
 .logo_will h1 {
@@ -47,29 +42,21 @@ html {
 .scroll {
   width: 100%;
   height: 270rem;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   position: relative;
   margin-bottom: 25rem;
 }
 
 .scroll div {
   width: fit-content;
-  /* height: fit-content; */
   height: 25em;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   justify-content: space-between;
-
   position: relative;
-
-  /*scroll 애니메이션*/
   opacity: 0;
   transition: all 1.5s ease;
   transform: translate(0, 100px);
@@ -127,14 +114,12 @@ html {
 
 /*bottom*/
 .bottom {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   height: 12em;
   margin-bottom: 15rem;
-
   /*scroll 애니메이션*/
   /* opacity: 0;
   transition: all 1.5s ease; */
@@ -156,14 +141,17 @@ html {
 
 .bottom button {
   font-size: 1.1em;
+  font-weight: 500;
   border: none;
   background-color: var(--main4);
   border-radius: 4px;
   cursor: pointer;
-
   width: 20%;
   height: 45px;
   min-width: 200px;
+}
+.bottom button:hover {
+  background-color: #F2E581;
 }
 
 .container {
@@ -194,6 +182,11 @@ html {
   column-gap: 60px;
 }
 
+#edit-delete-btn {
+  display: inline-flex;
+  font-size: 0.9rem;
+}
+
 .grey-button,
 .green-button,
 .yellow-button {
@@ -202,6 +195,8 @@ html {
   box-shadow: 0 1px 5px 0 #dbdbdb;
   cursor: pointer;
   font-size: 1em;
+  font-family: Noto Sans KR;
+  letter-spacing: -0.25px;
 }
 
 .grey-button {
@@ -253,35 +248,37 @@ html {
   height: 20px;
 }
 
-/*메시지 박스*/
 .toast {
   display: none;
-  border: 0.2px solid black;
   background-color: var(--BG2);
   width: 45vw;
-  height: 45vh;
   z-index: 100;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-family: Noto Sans KR;
+  letter-spacing: -0.25px;
+  box-shadow: 0 1px 5px 0 #dbdbdb;
 }
-.toast.show {
+.show {
   display: block;
 }
-
 .toast p {
   text-align: left;
   line-height: 2.5rem;
-  margin: 1.5rem;
+  margin: 1.5rem 1.5rem 0 1.5rem;
 }
 .toast .gray {
-  text-align: center;
+  text-align: right;
   color: gray;
 }
 .toast .close {
   position: absolute;
-  left: 50%;
+  left: 100%;
   transform: translateX(-50%);
-  padding: 0.5rem;
+  padding: 0.5px;
+}
+.toast .close i {
+  color: var(--main3);
 }

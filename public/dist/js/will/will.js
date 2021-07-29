@@ -1,7 +1,3 @@
-
-
-
-/////////////////////////////////////
 const triggerMargin = 150;
 const potos = document.querySelectorAll('.part');
 const bottom = document.querySelector('.bottom');
@@ -26,5 +22,3 @@ const setLayout = function () {
 
 window.addEventListener('load', setLayout);
 window.addEventListener('scroll', setLayout);
-
-
