@@ -37,6 +37,9 @@
 .logo_will i {
   color: #acc69f;
 }
+.logo_will i:hover {
+  color: var(--main1);
+}
 
 /*scroll*/
 .scroll {

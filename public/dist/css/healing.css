@@ -19,6 +19,9 @@
     color: #ACC69F;
     cursor: pointer;
 }
+.icon-pencil:hover{
+    color: #748e64;
+}
 
 .healing-list {
     width: 100%;
