@@ -23,6 +23,10 @@ function textLengthOverCut(txt, maxLen) {
   return txt;
 }
 
+function convertDate(data) {
+  return `${data.substr(0, 4)}/${data.substr(4, 2)}/${data.substr(6, 2)}`;
+}
+
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
     let countView = 0;
@@ -36,7 +40,7 @@ function setLayout(healingPreview, dbRef) {
       )}</h4>
           <p class="item-content">${textLengthOverCut(post.content, 30)}</p>
           <div class="item-detail">
-            <p class="item-time">${post.date}</p>
+            <p class="item-time">${convertDate(post.date)}</p>
             <div class="item-like">
               <i class="far fa-thumbs-up" id="icon-thumbs-blank"></i>
               <p>${post.likesCount}</p>

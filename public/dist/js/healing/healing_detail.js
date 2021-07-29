@@ -14,6 +14,10 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+function convertDate(data) {
+  return `${data.substr(0, 4)}/${data.substr(4, 2)}/${data.substr(6, 2)}`;
+}
+
 function setLayout(postId) {
   const postItem = document.createElement('table');
   const dbRef = firebase.database().ref('Healing/' + postId);
@@ -22,14 +26,18 @@ function setLayout(postId) {
     postItem.innerHTML = `
       <tr class="post-title-date">
         <td><h3>${data.title}</h3></td>
-        <td align="right"><p class="item-time">${data.date}</p></td>
+        <td align="right"><p class="item-time">${convertDate(
+          data.date
+        )}</p></td>
       </tr>
       <tr class="post-content">
         <td colspan='2'>${data.content}</td>
         <td></td>
       </tr>
       <tr colspan='2'>
-        <td colspan='2' class='post-like'><div class="item-like">추천&nbsp;&nbsp;<i class="far fa-thumbs-up" id="icon-thumbs-blank"></i><p>${data.likesCount}</p></div></td>
+        <td colspan='2' class='post-like'><div class="item-like">추천&nbsp;&nbsp;<i class="far fa-thumbs-up" id="icon-thumbs-blank"></i><p>${
+          data.likesCount
+        }</p></div></td>
         <td></td>
       </tr>
       <tr colspan='2' class="last-row"></tr>

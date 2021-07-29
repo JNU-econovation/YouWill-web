@@ -27,20 +27,28 @@ function like(uid) {
   });
 }
 
+function convertDate(data) {
+  return `${data.substr(0, 4)}/${data.substr(4, 2)}/${data.substr(6, 2)}`;
+}
+
 function setLayout(postInfo) {
   if (postInfo) {
     const postItem = document.createElement('table');
     postItem.innerHTML = `
     <tr class="post-title-date">
       <td><h3>${postInfo.title}</h3></td>
-      <td align="right"><p class="item-time">${postInfo.date}</p></td>
+      <td align="right"><p class="item-time">${convertDate(
+        postInfo.date
+      )}</p></td>
     </tr>
     <tr class="post-content">
       <td colspan='2'>${postInfo.content}</td>
       <td></td>
     </tr>
     <tr colspan='2'>
-      <td colspan='2' class='post-like'><div class="item-like">추천&nbsp;&nbsp;<i class="far fa-thumbs-up" onclick="like(${postInfo.uid})"></i><p>${postInfo.likesCount}</p></div></td>
+      <td colspan='2' class='post-like'><div class="item-like">추천&nbsp;&nbsp;<i class="far fa-thumbs-up" onclick="like(${
+        postInfo.uid
+      })"></i><p>${postInfo.likesCount}</p></div></td>
       <td></td>
     </tr>
     <tr colspan='2' class="last-row"></tr>
