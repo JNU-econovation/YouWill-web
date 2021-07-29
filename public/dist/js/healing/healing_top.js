@@ -23,8 +23,8 @@ function textLengthOverCut(txt, maxLen) {
 
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
-    snapshot.forEach((topSnap) => {
-      const post = topSnap.val();
+    snapshot.forEach((postSnap) => {
+      const post = postSnap.val();
       const healingItem = document.createElement('div');
       healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
         post.title,
@@ -34,14 +34,14 @@ function setLayout(healingPreview, dbRef) {
           <div class="item-detail">
             <p class="item-time">${post.date}</p>
             <div class="item-like">
-              <i class="fas fa-thumbs-up icon-thumbs"></i>
+              <i class="far fa-thumbs-up" id="icon-thumbs-blank"></i>
               <p>${post.likesCount}</p>
             </div>
           </div>`;
       healingItem.setAttribute('class', 'healing-item');
       healingItem.setAttribute(
         'onclick',
-        "location.href='healing_detail.html'"
+        `location.href='healing_detail.html?${post.id}'`
       );
       healingPreview.insertBefore(healingItem, healingPreview.firstChild);
     });

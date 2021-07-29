@@ -34,14 +34,14 @@ function setLayout(healingPreview, dbRef) {
           <div class="item-detail">
             <p class="item-time">${post.date}</p>
             <div class="item-like">
-              <i class="fas fa-thumbs-up icon-thumbs"></i>
+              <i class="far fa-thumbs-up" id="icon-thumbs-blank"></i>
               <p>${post.likesCount}</p>
             </div>
           </div>`;
       healingItem.setAttribute('class', 'healing-item');
       healingItem.setAttribute(
         'onclick',
-        "location.href='healing_detail.html'"
+        `location.href='healing_detail.html?${post.id}'`
       );
       healingPreview.insertBefore(healingItem, healingPreview.firstChild);
     });

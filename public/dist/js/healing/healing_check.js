@@ -1,5 +1,6 @@
 const healingContainer = document.getElementById('container');
 const pencilBtn = document.getElementById('pencil-btn');
+let wrote = JSON.parse(localStorage.getItem('wrote'));
 
 history.pushState(null, null, location.href);
 window.onpopstate = function () {
@@ -18,6 +19,14 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+function like(uid) {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user && user.uid === uid) {
+      alert('자신이 작성한 글은 추천할 수 없습니다.');
+    }
+  });
+}
+
 function setLayout(postInfo) {
   if (postInfo) {
     const postItem = document.createElement('table');
@@ -31,7 +40,7 @@ function setLayout(postInfo) {
       <td></td>
     </tr>
     <tr colspan='2'>
-      <td colspan='2' class='post-like'><div class="item-like">추천&nbsp;&nbsp;<i class="fas fa-thumbs-up icon-thumbs"></i><p>${postInfo.likesCount}</p></div></td>
+      <td colspan='2' class='post-like'><div class="item-like">추천&nbsp;&nbsp;<i class="far fa-thumbs-up" onclick="like(${postInfo.uid})"></i><p>${postInfo.likesCount}</p></div></td>
       <td></td>
     </tr>
     <tr colspan='2' class="last-row"></tr>
@@ -44,5 +53,5 @@ function setLayout(postInfo) {
 }
 
 window.addEventListener('load', () => {
-  setLayout(JSON.parse(localStorage.getItem('wrote')));
+  setLayout(wrote);
 });

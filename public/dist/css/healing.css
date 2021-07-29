@@ -94,9 +94,11 @@
     display: flex; 
     color: #A1A1A1;
 }
-
-.item-like > p {
-    margin-left: 5px;
+.item-like i {
+    cursor: pointer;
+}
+.item-like p {
+    margin-left: 2px;
 }
 
 .post-table {

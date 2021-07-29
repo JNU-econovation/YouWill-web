@@ -4,11 +4,6 @@ const completeBtn = document.getElementById('complete-btn');
 const dbRef = firebase.database().ref('Healing');
 const editor = document.getElementsByClassName('.editor');
 
-history.pushState(null, null, location.href);
-window.onpopstate = function () {
-  history.go(1);
-};
-
 function getCurrentDate() {
   let date = new Date();
   let year = date.getFullYear().toString();
@@ -28,24 +23,24 @@ completeBtn.addEventListener('click', function () {
     alert('글의 제목을 입력해 주세요.');
   } else if (!content) {
     alert('글의 내용을 입력해 주세요.');
+  } else {
+    firebase.auth().onAuthStateChanged(function (user) {
+      const newHealingRef = dbRef.push();
+      const uid = user.uid;
+      const postInfo = {
+        content: content,
+        date: getCurrentDate(),
+        id: newHealingRef.key,
+        likes: {
+          userId: true,
+        },
+        likesCount: 0,
+        title: healingTitle.value,
+        uid: uid,
+      };
+      newHealingRef.set(postInfo);
+      localStorage.setItem('wrote', JSON.stringify(postInfo));
+      window.location.href = 'healing_check.html';
+    });
   }
-  firebase.auth().onAuthStateChanged(function (user) {
-    const newHealingRef = dbRef.push();
-    const uid = user.uid;
-    const postInfo = {
-      content: content,
-      date: getCurrentDate(),
-      id: newHealingRef.key,
-      likes: {
-        userId: true,
-      },
-      likesCount: 0,
-      title: healingTitle.value,
-      uid: uid,
-    };
-    newHealingRef.set(postInfo);
-
-    localStorage.setItem('wrote', JSON.stringify(postInfo));
-    window.location.href = 'healing_check.html';
-  });
 });
