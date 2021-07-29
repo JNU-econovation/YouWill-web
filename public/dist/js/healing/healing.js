@@ -2,7 +2,6 @@ const healingTop = document.getElementById('healing-top');
 const healingRecent = document.getElementById('healing-recent');
 const pencilBtn = document.getElementById('pencil-btn');
 const dbRef = firebase.database().ref('Healing');
-const previewCount = 6;
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -31,7 +30,6 @@ function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
     let countView = 0;
     snapshot.forEach((postSnap) => {
-      if (countView === previewCount) return;
       let post = postSnap.val();
       let healingItem = document.createElement('div');
       if (post.content[0] === '<') {
@@ -53,9 +51,9 @@ function setLayout(healingPreview, dbRef) {
       } else {
         healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
           post.title,
-          20
+          40
         )}</h4>
-          <p class="item-content">${textLengthOverCut(post.content, 30)}</p>
+          <p class="item-content">${textLengthOverCut(post.content, 100)}</p>
           <div class="item-detail">
             <p class="item-date">${convertDate(post.date)}</p>
             <div class="item-like">
@@ -70,7 +68,8 @@ function setLayout(healingPreview, dbRef) {
         `location.href='healing_detail.html?${post.id}'`
       );
       healingPreview.insertBefore(healingItem, healingPreview.firstChild);
-      countView++;
+      if (countView === 6) return;
+      countView += 1;
     });
   });
 }
