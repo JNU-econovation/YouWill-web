@@ -4,7 +4,6 @@ const editor = document.getElementsByClassName('.editor');
 const toast = document.querySelector('.toast');
 const centered = document.getElementById('centered');
 const closeBtn = document.querySelector('.close');
-let clicked;
 
 function getCurrentDate() {
   let date = new Date();
@@ -19,18 +18,18 @@ function getCurrentDate() {
   return year + month + day;
 }
 
-function toastMessage() {
-  completeBtn.addEventListener('click', function () {
-    toast.classList.add('show');
-    centered.style.opacity = 0.5;
-    centered.style.pointerEvents = 'none';
-  });
-  closeBtn.onclick = function () {
-    toast.classList.remove('show');
-    centered.style.opacity = 1;
-    centered.style.pointerEvents = 'auto';
-    window.location.href = 'will_check.html';
-  };
+function openToast() {
+  console.log('토스트 열림');
+  toast.classList.add('show');
+  centered.style.opacity = 0.5;
+  centered.style.pointerEvents = 'none';
+}
+
+function closeToast() {
+  toast.classList.remove('show');
+  centered.style.opacity = 1;
+  centered.style.pointerEvents = 'auto';
+  window.location.href = 'will_check.html';
 }
 
 completeBtn.addEventListener('click', function () {
@@ -49,7 +48,7 @@ completeBtn.addEventListener('click', function () {
       newWillRef.set(uid);
       db.ref(`Will/${newWillRef.key}/` + uid).set(postInfo);
       localStorage.setItem('wrote', JSON.stringify(postInfo));
-      toastMessage();
+      openToast();
     });
   }
 });
