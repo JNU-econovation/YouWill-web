@@ -67,7 +67,7 @@ function setLayout(postInfo) {
     postItem.setAttribute('class', 'post-table');
     willContainer.insertBefore(postItem, buttons);
   } else {
-    window.location.href = '../mypage/mypage.html';
+    window.location.href = '../mypage/';
   }
 }
 

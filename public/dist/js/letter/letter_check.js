@@ -40,7 +40,7 @@ function setLayout(postInfo) {
     postItem.setAttribute('class', 'post-table');
     container.insertBefore(postItem, button);
   } else {
-    window.location.href = '../mypage/mypage.html';
+    window.location.href = '../mypage/';
   }
 }
 

@@ -81,7 +81,7 @@ function setLayout(postInfo) {
     postItem.setAttribute('class', 'post-table');
     healingContainer.insertBefore(postItem, buttons);
   } else {
-    window.location.href = '../mypage/mypage.html';
+    window.location.href = '../mypage/';
   }
 }
 
