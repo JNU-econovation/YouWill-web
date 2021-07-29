@@ -26,7 +26,7 @@ function setLayout(postId) {
     postItem.innerHTML = `
       <tr class="post-title-date">
         <td><h3>${data.title}</h3></td>
-        <td align="right"><p class="item-time">${convertDate(
+        <td align="right"><p class="item-date">${convertDate(
           data.date
         )}</p></td>
       </tr>

@@ -1,3 +1,4 @@
+
 const mypageName=document.getElementById('userName');
 const willCont=document.getElementById('title1');
 const healingRef = firebase.database().ref('Healing').orderByChild('likesCount');
@@ -65,3 +66,4 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
    
 });
+

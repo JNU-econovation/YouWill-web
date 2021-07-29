@@ -17,7 +17,7 @@
         <div class="write" style="width:320px">
             <div class="logo"><a href="/">You Will</a></div>
             <ul>
-                <li><a href="../will/">유서</a></li>
+                <li><a href="../will/" class="current-page">유서</a></li>
                 <li><a href="../letter/">편지</a></li>
                 <li><a href="../healing/">힐링</a></li>
             </ul>
@@ -27,7 +27,7 @@
             <button class="signup" id="signup"></button>
         </div>
     </header>
-	<class class="container">
+	<div class="container">
 		<div class="category-intro">
             <h3 class="category-name">유서</h3>
             <i class="fas fa-pencil-alt fa-3x icon-pencil"></i>
@@ -40,12 +40,10 @@
 			</div>
 		</div>
 		<div class="button-row">
-            <button class="grey-button" onclick="'../mypage/'">저장</button>
-            <button class="yellow-button">작성 완료</button>
+            <button type="button" class="grey-button" id="save-btn" onclick="location.href='../mypage/mypage.html'">저장</button>
+            <button type="button" class="yellow-button" id="complete-btn">작성 완료</button>
         </div>
-	</main>
-	
-	<!--toast message-->
+	</div>
 	<div class="toast">
 		<div class="msg">
 			<p class="black">
@@ -54,30 +52,13 @@
 				후회 가득한 과거와 불안하기만 한 미래 때문에 지금을 망치지 마세요.<br>
 				오늘을 살아가세요. 눈이 부시게.
 			</p>
-			<p class="gray">
-				드라마 <눈이 부시게>
-			</p>
+			<p class="gray">드라마 <눈이 부시게></p>
 		</div>
-		<button class="close">
-			닫기
-		</button>
+		<button class="close" onclick="closeToast()"><i class="fas fa-times"></i></button>
 	</div>
-
-	<!--footer-->
-	<footer>
-        <div class="first">
-            <div class="logo">You Will</div>
-            <ul>
-                <li>유서</li>
-                <li>편지</li>
-                <li>힐링</li>
-            </ul>
-        </div>
-        <div class="dum"></div>
-    </footer>
-	
 	<script src="../../editor/build/ckeditor.js"></script>
 	<script>ClassicEditor.create( document.querySelector( '.editor' ), {
+			placeholder: '당신의 이야기를 시작하세요.',
 			toolbar: {
 				items: [
 					'heading',
@@ -125,12 +106,11 @@
 				console.error( error );
 			} );
 	</script>
-	<script src="../../dist/js/will/will_write.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
-	
+	<script src="../../dist/js/will/will_write.js"></script>
 </body>
 </html>
