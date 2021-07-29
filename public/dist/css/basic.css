@@ -216,6 +216,9 @@ header ul {
 header ul li {
   padding: 0.5rem;
 }
+.current-page {
+  color: var(--main1);
+}
 /*header-버튼*/
 .btn {
   width: 45%;
