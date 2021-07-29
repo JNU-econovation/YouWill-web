@@ -26,26 +26,12 @@
             <button class="signup" id="signup"></button>
         </div>
     </header>
-    <div class="container">
+    <div class="container" id="container">
         <div class="category-intro">
             <h3 class="category-name">편지</h3>
             <a href="letter_write.html"><i class="fas fa-pencil-alt fa-3x icon-pencil"></i></a>
         </div>
-        <table class="post-table">
-            <tr class="post-title-date">
-                <td><h3>편지 제목</h3></td>
-                <td align="right"><p class="item-time">05.01 17:56</p></td>
-            </tr>
-            <tr class="post-content">
-                <td colspan='2'>편지 내용</td>
-                <td></td>
-            </tr>
-            <tr colspan='2' class="last-row"></tr>
-        </table>
-        <div class="button-row">
-            <button class="grey-button" onclick="history.go(-1)">뒤로 가기</button>
-            <button class="green-button" onclick="location.href='letter_last.html'">보내기</button>
-        </div>
+        <button id="button" class="green-button" onclick="location.href='letter_last.html'">편지 보내기</button>
     </div>
     <footer>
         <div class="logo">You Will</div>
@@ -55,11 +41,11 @@
             <li>힐링</li>
         </ul>
     </footer>
-    <script src="../../dist/js/healing/healing_detail.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+    <script src="../../dist/js/letter/letter_check.js"></script>
 </body>
 </html>

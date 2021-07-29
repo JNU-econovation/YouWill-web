@@ -9,27 +9,10 @@
     <link rel="stylesheet" href="../../dist/css/letter.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        // TODO: jQuery -> JS
-         $(function() {
-                $( "#datepicker" ).datepicker({
-                    showOn: "both",
-                    // buttonImage: "images/calendar.gif",
-                    buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
-                    buttonImageOnly: true,
-                    // buttonText: "Select date",
-                    changeYear:true,
-                    minDate:0,
-                    dateFormat:"yy. mm . dd"
-                });
-            });
-    </script>
 </head>
 <body>
-    <!--header-->
     <header>
         <div class="write" style="width:320px">
             <div class="logo"><a href="/">You Will</a></div>
@@ -45,54 +28,35 @@
         </div>
     </header>
     </header>
-    <!--logo_letter-->
     <section class="logo_letter">
         <h1>편지</h1>
         <button><i class="fas fa-pencil-alt fa-3x icon-pencil"></i></button>       
     </section>
-    <!--main-->
     <section class="main">
         <div class="who">
-            <div>누구에게 보내는 편지인가요?</div>
+            <div class="question">누구에게 보내는 편지인가요?</div>
             <div class="btns">
                 <button id="toMe">나에게</button>
                 <button id="toOther">다른 사람에게</button>
             </div>
         </div>
         <div class="info">
-            <div>받는 사람의 휴대폰 번호나 이메일 주소를 입력해주세요.</div>
-            <form name="userInfo" action="" method="" autocomplete="on">
-                <input class="phoneOrEmail" type='email' name='userEmail'>
-            </form>
-        </div>
-        <div class="when">
-            <div>언제 도착하는 편지인가요?</div>
-            <form action="" class="date">
-                <select name="" id="cmbYear" onchange="m_change()"></select>
-                <select name="" id="cmbMonth" onchange="m_change()"></select>
-                <select name="" id="cmbDay"></select>
-            </form>
-           
+            <div class="question">받는 사람의 이메일 주소를 입력해주세요.</div>
+            <input id="email-input" type='email' name='userEmail' placeholder="example@example.com">
         </div>
         <div class="letter_pad">
-            <div class="msg">마음에 드는 편지지를 골라주세요.</div>
+            <div class="msg question">마음에 드는 편지지를 골라주세요.</div>
             <div class="pad-list">
-                <!-- TODO: 동적 생성(JS) -->
-                <div class="item">A</div>
-                <div class="item">B</div>
-                <div class="item">C</div>
-                <div class="item">D</div>
-                <div class="item">E</div>
-                <div class="item">F</div>
+                <img class="item" id="pad-0" src="../../dist/img/letter_paper_0.png"/>
+                <img class="item" id="pad-1" src="../../dist/img/letter_paper_1.png"/>
+                <img class="item" id="pad-2" src="../../dist/img/letter_paper_2.png"/>
             </div>
         </div>
     </section>
-    <!--saveAndWrite-->
     <section class="saveAndWrite">
         <button class="save" onclick="location.href='../mypage/mypage.html'">저장</button>
-        <button class="goToWrite" onclick="location.href='letter_write.html'">편지 작성하러 가기</button>
+        <button type="button" class="goToWrite" id="write-btn">편지 작성하기</button>
     </section>
-    <!--footer-->
     <footer>
         <div class="first">
             <div class="logo">You Will</div>
@@ -104,11 +68,139 @@
         </div>
         <div class="dum"></div>
     </footer>
-    <script src="../../dist/js/letter/letter.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+    <!-- <script src="../../dist/js/letter/letter.js"></script> -->
+    <script>
+        const toMe = document.getElementById('toMe');
+        const toOther = document.getElementById('toOther');
+        const emailInput = document.getElementById('email-input');
+        const pad0 = document.getElementById('pad-0');
+        const pad1 = document.getElementById('pad-1');
+        const pad2 = document.getElementById('pad-2');
+        const writeBtn = document.getElementById('write-btn');
+        let clickedToMe = false;
+        let clickedToOther = false;
+        let paperType = -1;
+        let clickedPad0 = false;
+        let clickedPad1 = false;
+        let clickedPad2 = false;
+
+        toMe.addEventListener('click', function () {
+        if (clickedToMe) {
+            clickedToMe = false;
+            toMe.style.backgroundColor = '#C7D4C0';
+            toMe.style.color = '#191919';
+        } else {
+            if (clickedToOther) {
+            clickedToOther = false;
+            toOther.style.backgroundColor = '#f8f3cc';
+            }
+            clickedToMe = true;
+            toMe.style.backgroundColor = '#748e64';
+            toMe.style.color = '#fff';
+        }
+        });
+
+        toOther.addEventListener('click', function () {
+        if (clickedToOther) {
+            clickedToOther = false;
+            toOther.style.backgroundColor = '#f8f3cc';
+        } else {
+            if (clickedToMe) {
+            clickedToMe = false;
+            toMe.style.backgroundColor = '#C7D4C0';
+            toMe.style.color = '#191919';
+            }
+            clickedToOther = true;
+            toOther.style.backgroundColor = '#F2E581';
+        }
+        });
+
+        pad0.addEventListener('click', function () {
+        if (clickedPad0) {
+            clickedPad0 = false;
+            paperType = -1;
+            pad0.style.border = '';
+        } else {
+            if (clickedPad1 || clickedPad2) {
+            clickedPad1 = false;
+            clickedPad2 = false;
+            pad1.style.border = '';
+            pad2.style.border = '';
+            }
+            clickedPad0 = true;
+            paperType = 0;
+            pad0.style.border = '3px solid #ACC69F';
+            pad0.style.borderRadius = '5px';
+        }
+        });
+
+        pad1.addEventListener('click', function () {
+        if (clickedPad1) {
+            clickedPad1 = false;
+            paperType = -1;
+            pad1.style.border = '';
+        } else {
+            if (clickedPad0 || clickedPad2) {
+            clickedPad0 = false;
+            clickedPad2 = false;
+            pad0.style.border = '';
+            pad2.style.border = '';
+            }
+            clickedPad1 = true;
+            paperType = 1;
+            pad1.style.border = '3px solid #ACC69F';
+            pad1.style.borderRadius = '5px';
+        }
+        });
+
+        pad2.addEventListener('click', function () {
+        if (clickedPad2) {
+            clickedPad2 = false;
+            paperType = -1;
+            pad2.style.border = '';
+        } else {
+            if (clickedPad0 || clickedPad1) {
+            clickedPad0 = false;
+            clickedPad1 = false;
+            pad0.style.border = '';
+            pad1.style.border = '';
+            }
+            clickedPad2 = true;
+            paperType = 2;
+            pad2.style.border = '3px solid #ACC69F';
+            pad2.style.borderRadius = '5px';
+        }
+        });
+
+        writeBtn.addEventListener('click', function () {
+        let email = emailInput.value;
+        const regExp =
+            /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+        if (!clickedToMe && !clickedToOther) {
+            alert('누구에게 편지를 보낼지 선택해 주세요.');
+        } else if (!email) {
+            alert('받는 사람의 이메일 주소를 입력해 주세요.');
+        } else if (!regExp.test(email)) {
+            alert('올바르지 않은 이메일 형식입니다.');
+        } else if (paperType === -1) {
+            alert('사용할 편지지를 선택해 주세요.');
+        } else {
+            localStorage.setItem(
+            'letterOption',
+            JSON.stringify({
+                paper_type: paperType,
+                recipient_number: email,
+            })
+            );
+            window.location.href = 'letter_write.html';
+        }
+        });
+    </script>
 </body>
 </html>

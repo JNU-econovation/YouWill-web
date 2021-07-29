@@ -32,7 +32,6 @@
             <h3 class="category-name">편지</h3>
             <i class="fas fa-pencil-alt fa-3x icon-pencil"></i>
         </div>
-		<input type="text" minlength="1" class="title-input" placeholder="제목을 입력하세요.">
 		<div class="centered">
 			<div class="row row-editor">
 				<div class="editor-container">
@@ -41,12 +40,13 @@
 			</div>
 		</div>
 		<div class="button-row">
-            <button class="signin" id="signin"></button>
-            <button class="signup" id="signup"></button>
+            <button type="button" class="grey-button" id="save-btn" onclick="location.href='../mypage/mypage.html'">저장</button>
+            <button type="button" class="yellow-button" id="complete-btn">작성 완료</button>
         </div>
 	</main>
 	<script src="../../editor/build/ckeditor.js"></script>
 	<script>ClassicEditor.create( document.querySelector( '.editor' ), {
+			placeholder: '내용을 입력하세요.',
 			toolbar: {
 				items: [
 					'heading',
@@ -99,5 +99,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
     <script src="../../dist/js/auth.js"></script>
+	<script src="../../dist/js/letter/letter_write.js"></script>
 </body>
 </html>
