@@ -4,7 +4,7 @@ const pencilBtn = document.getElementById('pencil-btn');
 let wrote = JSON.parse(localStorage.getItem('wrote'));
 
 history.pushState(null, null, location.href);
-window.onpopstate = function () {
+window.onpopstate = function (event) {
   history.go(1);
 };
 
@@ -72,5 +72,5 @@ function setLayout(postInfo) {
 }
 
 window.addEventListener('load', () => {
-  // setLayout(wrote);
+  setLayout(wrote);
 });
