@@ -27,21 +27,40 @@ function convertDate(data) {
 
 function setLayout(healingPreview, dbRef) {
   dbRef.on('value', (snapshot) => {
-    snapshot.forEach((postSnap) => {
-      const post = postSnap.val();
+    snapshot.forEach((topSnap) => {
+      const post = topSnap.val();
+      console.log(post);
       const healingItem = document.createElement('div');
-      healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
-        post.title,
-        20
-      )}</h4>
-          <p class="item-content">${textLengthOverCut(post.content, 30)}</p>
+      if (post.content[0] === '<') {
+        healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
+          post.title,
+          40
+        )}</h4>
+        <div class="item-content-html">${textLengthOverCut(
+          post.content,
+          100
+        )}</div>
+        <div class="item-detail">
+          <p class="item-date">${convertDate(post.date)}</p>
+          <div class="item-like">
+            <i class="far fa-thumbs-up" id="icon-thumbs-blank"></i>
+            <p>${post.likesCount}</p>
+          </div>
+        </div>`;
+      } else {
+        healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
+          post.title,
+          40
+        )}</h4>
+          <p class="item-content">${textLengthOverCut(post.content, 100)}</p>
           <div class="item-detail">
-            <p class="item-time">${convertDate(post.date)}</p>
+            <p class="item-date">${convertDate(post.date)}</p>
             <div class="item-like">
               <i class="far fa-thumbs-up" id="icon-thumbs-blank"></i>
               <p>${post.likesCount}</p>
             </div>
           </div>`;
+      }
       healingItem.setAttribute('class', 'healing-item');
       healingItem.setAttribute(
         'onclick',

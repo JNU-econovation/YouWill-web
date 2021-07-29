@@ -67,6 +67,7 @@
 }
 
 .item-title {
+    height: 96px;
     padding: 25px 25px 15px 25px;
     font-size: 1.2rem;
     font-weight: 500;
@@ -76,8 +77,11 @@
 .item-content {
     padding: 0 25px;
     height: 45%;
-    font-size: 1.1rem;
     line-height: 1.4em;
+}
+.item-content-html {
+    padding: 0px 25px 15px 25px;
+    height: 45%;
 }
 
 .item-detail {

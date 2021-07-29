@@ -53,7 +53,7 @@ function setLayout(postInfo) {
     postItem.innerHTML = `
     <tr class="post-title-date">
       <td><h3>${postInfo.title}</h3></td>
-      <td align="right"><p class="item-time">${convertDate(
+      <td align="right"><p class="item-date">${convertDate(
         postInfo.date
       )}</p></td>
     </tr>
