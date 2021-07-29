@@ -158,7 +158,7 @@
   display: grid;
   grid-gap: 5rem;
   place-items: center;
-  margin-top: 150px;
+  margin: 150px 0;
 }
 
 .category-intro {
