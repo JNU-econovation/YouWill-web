@@ -1,34 +1,31 @@
 const signinGNB = document.getElementById('signin');
 const signupGNB = document.getElementById('signup');
 
-//firebase 인증
+
 const firebaseConfig = {
- 
+  apiKey: "AIzaSyC3IBWiBpkJrbTUDjZghmI6lhsAwZTyCzQ",
+  authDomain: "youwill-ab07b.firebaseapp.com",
+  databaseURL: "https://youwill-ab07b-default-rtdb.firebaseio.com",
+  projectId: "youwill-ab07b",
+  storageBucket: "youwill-ab07b.appspot.com",
+  messagingSenderId: "911679109781",
+  appId: "1:911679109781:web:0d175c565313132dc1b99c",
+  measurementId: "G-NLLD2DRTLL"
 };
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-////////////////////////////////////////////////////////
-const mypageName=document.getElementById('userName');
-const auth=firebase.auth();
-const willRef=firebase.database().ref('Will/');
-let userInfo;
-//유서 페이지 key값 확인
-willRef.on('child_added', function(data){
-	console.log(data.val(), 'key: ', data.key)
-})
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  
   firebase.auth().onAuthStateChanged(function (user) {
     const target = window.location.pathname === '/' ? 'pages' : '..';
+   
     if (user) {
-      //로그인 성공
-      userInfo=user;
-      console.log('로그인 성공');
-
-      //로그인,회원가입 페이지
+      
+     
+      
       if (
         window.location.pathname === '/pages/signin/' ||
         window.location.pathname === '/pages/signup/'
@@ -43,14 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "location.href='" + target + "/mypage/mypage.html'"
       );
 
-      //마이페이지 접속
-      if(window.location.pathname==='/pages/mypage/mypage.html'){
-        console.log('마이페이지 접속 성공');
-        mypageName.textContent = user.displayName;
-      
-      }
+     
     } else {
-      //로그인 실패
+      
       console.log('not signin');
       signinGNB.textContent = '로그인';
       signinGNB.setAttribute(
@@ -76,7 +68,7 @@ function writeUserData(email, name, uid) {
       uid: uid,
     });
 }
-//구글 로그인
+
 function googleLogin() {
   let provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/plus.login');
@@ -100,7 +92,7 @@ function googleLogin() {
         });
     });
 }
-//회원 가입
+
 function signup(name, email, password) {
   firebase
     .auth()
@@ -119,11 +111,11 @@ function signup(name, email, password) {
       }
     });
 }
-//로그인
+
 function signin(email, password) {
   firebase
     .auth()
-    .signInWithEmailAndPassword(email, password)
+    .signIn7WithEmailAndPassword(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
       console.log('로그인 성공');
@@ -135,7 +127,7 @@ function signin(email, password) {
       console.log(errorMessage);
     });
 }
-//로그아웃
+
 function signout() {
   firebase
     .auth()
