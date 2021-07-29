@@ -1,26 +1,38 @@
+.logo_will {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.logo_will h1 {
+    color: var(--main1);
+    margin-bottom: 0.5em;
+    font-weight: bolder;
+}
+
+.logo_will button {
+    border: none;
+    background-color: white;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.logo_will i {
+    color: #acc69f;
+}
+
+.logo_will i:hover {
+    color: var(--main1);
+}
+
 .container {
     display: grid;
     grid-gap: 5rem;
     place-items: center;
-    margin: 150px 0;
-}
-
-.category-intro {
-    text-align: center;
-}
-
-.category-name {
-    font-size: 1.8rem;
-    color: #748e64;
-    margin-bottom: 20px;
-}
-
-.icon-pencil{
-    color: #ACC69F;
-    cursor: pointer;
-}
-.icon-pencil:hover{
-    color: #748e64;
 }
 
 .healing-list {
