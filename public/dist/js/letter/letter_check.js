@@ -22,7 +22,7 @@ function setLayout(postInfo) {
       )}</p></td>
     </tr>
     <tr class="post-content">
-      <td id="content" background="../../dist/img/letter_paper_${
+      <td id="content" height="1200px" background="../../dist/img/letter_paper_${
         postInfo.paper_type
       }.png" colspan='2'>${postInfo.content}</td>
       <td></td>
