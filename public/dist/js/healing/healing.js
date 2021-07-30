@@ -32,6 +32,8 @@ function setLayout(healingPreview, dbRef) {
     snapshot.forEach((postSnap) => {
       let post = postSnap.val();
       let healingItem = document.createElement('div');
+      if (countView === 6) return;
+      countView += 1;
       if (post.content[0] === '<') {
         healingItem.innerHTML = `<h4 class="item-title">${textLengthOverCut(
           post.title,
@@ -68,8 +70,6 @@ function setLayout(healingPreview, dbRef) {
         `location.href='healing_detail.html?${post.id}'`
       );
       healingPreview.insertBefore(healingItem, healingPreview.firstChild);
-      if (countView === 6) return;
-      countView += 1;
     });
   });
 }
