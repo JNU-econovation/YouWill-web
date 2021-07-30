@@ -1,20 +1,15 @@
 const signinGNB = document.getElementById('signin');
 const signupGNB = document.getElementById('signup');
 
+const firebaseConfig = {};
 
-const firebaseConfig = {
-
-};
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 document.addEventListener('DOMContentLoaded', function () {
   firebase.auth().onAuthStateChanged(function (user) {
     const target = window.location.pathname === '/' ? 'pages' : '..';
-
-
     if (user) {
-
       if (
         window.location.pathname === '/pages/signin/' ||
         window.location.pathname === '/pages/signup/'
@@ -26,11 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
       signupGNB.textContent = '마이페이지';
       signupGNB.setAttribute(
         'onclick',
-        "location.href='" + target + "/mypage/mypage.html'"
+        "location.href='" + target + "/mypage/'"
       );
-
     } else {
-
       console.log('not signin');
       signinGNB.textContent = '로그인';
       signinGNB.setAttribute(
@@ -88,7 +81,7 @@ function signup(name, email, password) {
     .then((userCredential) => {
       const user = userCredential.user;
       writeUserData(email, name, user.uid);
-      alert('회원가입이 완료되었습니다.');
+      setTimeout(alert('회원가입이 완료되었습니다.'), 3000);
     })
     .catch((error) => {
       const errorCode = error.code;

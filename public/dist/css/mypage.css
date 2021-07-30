@@ -1,5 +1,4 @@
 :root {
-  /*color*/
   --main1: #748e64;
   --main2: #acc69f;
   --main3: #a1a1a1;
@@ -13,26 +12,25 @@
   --font3: #191919;
 }
 
-/*side var*/
-.sideVar {
+.sidebar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   text-align: left;
-
+  font-size: 1.2rem;
   height: 50vh;
-  /* border-right: 1px solid black;
-  padding: 20% 0; */
   margin-top: 2rem;
   margin-left: 5rem;
   min-width: 154px;
+}
+.sidebar ul li a {
+  font-size: 1rem;
 }
 .write_tabs .tab {
   margin-bottom: 0.5rem;
 }
 
-/**grid**/
 .grid {
   display: grid;
   grid-template-columns: 20% 1fr;
@@ -40,13 +38,11 @@
   column-gap: 3em;
 }
 
-/*write_tabs*/
 .tab.active a {
   display: block;
   background-color: var(--BG2);
 }
 
-/*content*/
 .cont {
   display: none;
 }
@@ -60,11 +56,12 @@
 
 .contents .cont strong {
   display: block;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 .contents .cont a {
   display: block;
-  background-color: var(--BG2);
+  background-color: #F8F8FA;
   width: 60%;
   height: 3rem;
   cursor: pointer;
@@ -73,7 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0.2rem 0.2rem 0.5rem gray;
+  box-shadow: 0 1px 5px 0 #dbdbdb;
   min-width: 447px;
 }
 .contents .cont a .title {
@@ -81,4 +78,5 @@
 }
 .contents .cont a .date {
   margin-right: 1rem;
+  color: var(--main3);
 }
